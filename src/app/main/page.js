@@ -3,16 +3,16 @@ import ClientContactView from "@/components/client-view/contact";
 import ClientExperienceView from "@/components/client-view/experience";
 import ClientHomeView from "@/components/client-view/home";
 import ClientProjectView from "@/components/client-view/project";
-import { extractAllDatas } from "@/services";
+import { extractAllDatas, getData } from "@/services";
 
 import React from "react";
 
 export default async function Main() {
-  const homeSectionData = await extractAllDatas("home");
-  const aboutSectionData = await extractAllDatas("about");
-  const experienceSectionData = await extractAllDatas("experience");
-  const educationSectionData = await extractAllDatas("education");
-  const projectSectionData = await extractAllDatas("project");
+  const homeSectionData = await getData("home");
+  const aboutSectionData = await getData("about");
+  const experienceSectionData = await getData("experience");
+  const educationSectionData = await getData("education");
+  const projectSectionData = await getData("project");
   return (
     <div>
       <ClientHomeView
