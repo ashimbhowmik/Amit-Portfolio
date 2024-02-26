@@ -65,3 +65,14 @@ export async function login(formData) {
     console.log(e);
   }
 }
+
+export async function extractAllDatas(currentSection) {
+  const res = await fetch(`http://localhost:3000/api/${currentSection}/get`, {
+    method: "GET",
+    cache: "no-store",
+  });
+
+  const data = await res.json();
+
+  return data && data.data;
+}
