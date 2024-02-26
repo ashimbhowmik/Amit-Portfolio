@@ -67,23 +67,26 @@ export async function login(formData) {
 }
 
 export async function extractAllDatas(currentSection) {
-  const res = await fetch(`http://localhost:3000/api/${currentSection}/get`, {
-    method: "GET",
-    cache: "no-store",
-  });
+  const res = await fetch(
+    `https://amit-portfolio-iota.vercel.app//api/${currentSection}/get`,
+    {
+      method: "GET",
+      cache: "no-store",
+    }
+  );
 
   const data = await res.json();
 
   return data && data.data;
 }
 
-export async function homePartData() {
-  const res = await fetch("/api/home/get", {
-    method: "GET",
-    cache: "no-store",
-  });
+// export async function homePartData() {
+//   const res = await fetch("/api/home/get", {
+//     method: "GET",
+//     cache: "no-store",
+//   });
 
-  const data = await res.json();
+//   const data = await res.json();
 
-  return data && data.data;
-}
+//   return data && data.data;
+// }

@@ -8,11 +8,11 @@ import { extractAllDatas, getData } from "@/services";
 import React from "react";
 
 export default async function Main() {
-  const homeSectionData = await getData("home");
-  const aboutSectionData = await getData("about");
-  const experienceSectionData = await getData("experience");
-  const educationSectionData = await getData("education");
-  const projectSectionData = await getData("project");
+  const homeSectionData = await extractAllDatas("home");
+  const aboutSectionData = await extractAllDatas("about");
+  const experienceSectionData = await extractAllDatas("experience");
+  const educationSectionData = await extractAllDatas("education");
+  const projectSectionData = await extractAllDatas("project");
   return (
     <div>
       <ClientHomeView
