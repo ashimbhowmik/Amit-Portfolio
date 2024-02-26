@@ -1,15 +1,9 @@
-import HomePart from "@/components/portfolio/HomePart/HomePart";
-import { homePartData } from "@/services";
+"use client";
 
-export default async function ClientHomeView() {
-  const homeSectionData = await homePartData();
-  console.log(homeSectionData, "amit");
+export default function ClientHomeView() {
   return (
     <div>
-      {homeSectionData?.map((item) => (
-        <div key={item.id}>{item.heading}</div>
-      ))}
-      <HomePart homeData={homeSectionData && homeSectionData.data}></HomePart>
+      <h1>Home part</h1>
     </div>
   );
 }
