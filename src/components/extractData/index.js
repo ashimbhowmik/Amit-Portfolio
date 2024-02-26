@@ -1,3 +1,4 @@
+// "use client";
 import { extractAllDatas } from "@/services";
 import ClientHomeView from "../client-view/home";
 import ClientAboutView from "../client-view/about";
