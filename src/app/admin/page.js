@@ -5,8 +5,11 @@ import AdminContactView from "@/components/admin-view/contact";
 import AdminEducationView from "@/components/admin-view/education";
 import AdminExperienceView from "@/components/admin-view/experience";
 import AdminHomeView from "@/components/admin-view/home";
+import Login from "@/components/admin-view/login";
+// import Login from "@/components/admin-view/login";
 import AdminProjectView from "@/components/admin-view/project";
-import { useState } from "react";
+import { addData, getData, login, updateData } from "@/services";
+import { useEffect, useState } from "react";
 
 const initialHomeFormData = {
   heading: "",
@@ -74,7 +77,7 @@ export default function AdminView() {
         <AdminHomeView
           formData={homeViewFormData}
           setFormData={setHomeViewFormData}
-          // handleSaveData={handleSaveData}
+          handleSaveData={handleSaveData}
         />
       ),
     },
@@ -85,7 +88,7 @@ export default function AdminView() {
         <AdminAboutView
           formData={aboutViewFormData}
           setFormData={setAboutViewFormData}
-          // handleSaveData={handleSaveData}
+          handleSaveData={handleSaveData}
         />
       ),
     },
@@ -95,7 +98,7 @@ export default function AdminView() {
       component: (
         <AdminExperienceView
           formData={experienceViewFormData}
-          // handleSaveData={handleSaveData}
+          handleSaveData={handleSaveData}
           setFormData={setExperienceViewFormData}
           data={allData?.experience}
         />
@@ -107,7 +110,7 @@ export default function AdminView() {
       component: (
         <AdminEducationView
           formData={educationViewFormData}
-          // handleSaveData={handleSaveData}
+          handleSaveData={handleSaveData}
           setFormData={setEducationViewFormData}
           data={allData?.education}
         />
@@ -119,7 +122,7 @@ export default function AdminView() {
       component: (
         <AdminProjectView
           formData={projectViewFormData}
-          // handleSaveData={handleSaveData}
+          handleSaveData={handleSaveData}
           setFormData={setProjectViewFormData}
           data={allData?.project}
         />
@@ -131,35 +134,127 @@ export default function AdminView() {
       component: <AdminContactView data={allData && allData?.contact} />,
     },
   ];
+  async function extractAllDatas() {
+    const response = await getData(currentSelectedTab);
+
+    if (
+      currentSelectedTab === "home" &&
+      response &&
+      response.data &&
+      response.data.length
+    ) {
+      setHomeViewFormData(response && response.data[0]);
+      setUpdate(true);
+    }
+
+    if (
+      currentSelectedTab === "about" &&
+      response &&
+      response.data &&
+      response.data.length
+    ) {
+      setAboutViewFormData(response && response.data[0]);
+      setUpdate(true);
+    }
+
+    if (response?.success) {
+      setAllData({
+        ...allData,
+        [currentSelectedTab]: response && response.data,
+      });
+    }
+  }
+
+  // console.log(allData, "allData");
+
+  async function handleSaveData() {
+    const dataMap = {
+      home: homeViewFormData,
+      about: aboutViewFormData,
+      education: educationViewFormData,
+      experience: experienceViewFormData,
+      project: projectViewFormData,
+    };
+
+    const response = update
+      ? await updateData(currentSelectedTab, dataMap[currentSelectedTab])
+      : await addData(currentSelectedTab, dataMap[currentSelectedTab]);
+
+    // console.log(response, "response");
+
+    if (response.success) {
+      resetFormDatas();
+      extractAllDatas();
+    }
+  }
+
+  useEffect(() => {
+    extractAllDatas();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentSelectedTab]);
+
+  function resetFormDatas() {
+    setHomeViewFormData(initialHomeFormData);
+    setAboutViewFormData(initialAboutFormData);
+    setExperienceViewFormData(initialExperienceFormData);
+    setEducationViewFormData(initialEducationFormData);
+    setProjectViewFormData(initialProjectFormData);
+  }
+
+  console.log(allData, homeViewFormData, "homeViewFormData");
+
+  useEffect(() => {
+    setAuthUser(JSON.parse(sessionStorage.getItem("authUser")));
+  }, []);
+
+  async function handleLogin() {
+    const res = await login(loginFormData);
+
+    console.log(res, "login");
+
+    if (res?.success) {
+      setAuthUser(true);
+      sessionStorage.setItem("authUser", JSON.stringify(true));
+    }
+  }
+
+  if (!authUser)
+    return (
+      <Login
+        formData={loginFormData}
+        handleLogin={handleLogin}
+        setFormData={setLoginFormData}
+      />
+    );
   return (
     <div className="border-b border-gray-200">
       <nav className="-mb-0.5 flex justify-center spcae-x-6" role="tablist">
-        {menuItems.map((item) => (
+        {menuItems?.map((item) => (
           <button
             key={item.id}
             type="button"
             className="p-4 font-bold text-xl text-black"
             onClick={() => {
               setCurrentSelectedTab(item.id);
-              // resetFormDatas();
-              // setUpdate(false);
+              resetFormDatas();
+              setUpdate(false);
             }}
           >
             {item.label}
           </button>
         ))}
         <button
-          //   onClick={() => {
-          //     setAuthUser(false);
-          //     sessionStorage.removeItem("authUser");
-          //   }}
+          onClick={() => {
+            setAuthUser(false);
+            sessionStorage.removeItem("authUser");
+          }}
           className="p-4 font-bold text-xl text-black"
         >
           Logout
         </button>
       </nav>
       <div className="mt-10 p-10">
-        {menuItems.map(
+        {menuItems?.map(
           (item) => item.id === currentSelectedTab && item.component
         )}
       </div>
