@@ -76,3 +76,14 @@ export async function extractAllDatas(currentSection) {
 
   return data && data.data;
 }
+
+export async function homePartData() {
+  const res = await fetch("http://localhost:3000/api/home/get", {
+    method: "GET",
+    cache: "no-store",
+  });
+
+  const data = await res.json();
+
+  return data && data.data;
+}
