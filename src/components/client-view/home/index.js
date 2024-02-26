@@ -9,6 +9,7 @@ export default async function ClientHomeView() {
       {homeSectionData?.map((item) => (
         <div key={item.id}>{item.heading}</div>
       ))}
+      <HomePart homeData={homeSectionData && homeSectionData.data}></HomePart>
     </div>
   );
 }

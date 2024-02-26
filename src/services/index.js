@@ -78,7 +78,7 @@ export async function extractAllDatas(currentSection) {
 }
 
 export async function homePartData() {
-  const res = await fetch("http://localhost:3000/api/home/get", {
+  const res = await fetch("/api/home/get", {
     method: "GET",
     cache: "no-store",
   });
