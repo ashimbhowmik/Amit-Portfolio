@@ -15,17 +15,33 @@ export default async function ExtractAllData() {
 
   return (
     <div className="">
-      <ClientHomeView data={homeSectionData}></ClientHomeView>
+      <ClientHomeView
+        data={
+          homeSectionData && homeSectionData.length ? homeSectionData[0] : []
+        }
+      ></ClientHomeView>
       <ClientAboutView
         data={
           aboutSectionData && aboutSectionData.length ? aboutSectionData[0] : []
         }
       ></ClientAboutView>
       <ClientProjectView
-        educationData={educationSectionData}
-        experienceData={experienceSectionData}
+        educationData={
+          educationSectionData && educationSectionData
+            ? educationSectionData[0]
+            : []
+        }
+        experienceData={
+          experienceSectionData && experienceSectionData
+            ? experienceSectionData[0]
+            : []
+        }
       ></ClientProjectView>
-      <ClientExperienceView data={projectSectionData}></ClientExperienceView>
+      <ClientExperienceView
+        data={
+          projectSectionData && projectSectionData ? projectSectionData[0] : []
+        }
+      ></ClientExperienceView>
       <ClientContactView></ClientContactView>
     </div>
   );
