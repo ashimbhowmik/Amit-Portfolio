@@ -33,4 +33,6 @@
   display: inline-block;
   font-size: 12px;
   white-space: nowrap;
+  transition: opacity 0.3s ease-in-out; /* Added transition property */
+  opacity: 0; /* Start with the button name hidden */
 }
