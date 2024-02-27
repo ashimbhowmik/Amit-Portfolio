@@ -16,7 +16,7 @@ export default async function ExtractAllData() {
   const educationSectionData = await extractAllDatas("education");
   const projectSectionData = await extractAllDatas("project");
   return (
-    <div>
+    <div className="pb-10">
       <ClientHomeView
         data={
           homeSectionData && homeSectionData.length ? homeSectionData[0] : []
@@ -49,7 +49,7 @@ export default async function ExtractAllData() {
           projectSectionData && projectSectionData ? projectSectionData[0] : []
         }
       ></ClientExperienceView> */}
-      {/* <ClientContactView></ClientContactView> */}M
+      {/* <ClientContactView></ClientContactView> */}
     </div>
   );
 }
