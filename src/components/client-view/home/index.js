@@ -25,8 +25,8 @@ export default function ClientHomeView({ data }) {
           />
         </div>
       </div>
-      <div className="w-[55%] min-h-screen flex items-center">
-        <div className="w-full items-center flex">
+      <div className="w-[55%] min-h-screen flex items-center ">
+        <div className="w-full items-center flex relative">
           <div className="space-y-4 w-[75%]">
             <h1 className="text-[#FFB400] font-bold text-6xl">
               {data?.heading}.
@@ -55,7 +55,7 @@ export default function ClientHomeView({ data }) {
               </p>
             </button>
           </div>
-          <div className="w-[25%] flex justify-end">
+          <div className="w-[25%] flex justify-end absolute top-[0px] right-[0px]">
             <Navbar />
           </div>
         </div>

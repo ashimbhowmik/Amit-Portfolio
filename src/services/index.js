@@ -68,7 +68,7 @@ export async function login(formData) {
 
 export async function extractAllDatas(currentSection) {
   const res = await fetch(
-    `https://amit-portfolio-iota.vercel.app//api/${currentSection}/get`,
+    `https://amit-portfolio-iota.vercel.app/api/${currentSection}/get`,
     {
       method: "GET",
       cache: "no-store",

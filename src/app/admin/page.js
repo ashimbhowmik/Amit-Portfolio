@@ -6,6 +6,7 @@ import AdminEducationView from "@/components/admin-view/education";
 import AdminExperienceView from "@/components/admin-view/experience";
 import AdminHomeView from "@/components/admin-view/home";
 import Login from "@/components/admin-view/login";
+import AdminPersonal from "@/components/admin-view/personal";
 // import Login from "@/components/admin-view/login";
 import AdminProjectView from "@/components/admin-view/project";
 import { addData, getData, login, updateData } from "@/services";
@@ -22,6 +23,18 @@ const initialAboutFormData = {
   yearofexperience: "",
   noofclients: "",
   skills: "",
+};
+const initialPersonalData = {
+  name: "",
+  age: "",
+  nationality: "",
+  work: "",
+  adress: "",
+  phone: "",
+  email: "",
+  github: "",
+  linkdn: "",
+  language: "",
 };
 
 const initialExperienceFormData = {
@@ -55,6 +68,7 @@ export default function AdminView() {
   const [homeViewFormData, setHomeViewFormData] = useState(initialHomeFormData);
   const [aboutViewFormData, setAboutViewFormData] =
     useState(initialAboutFormData);
+  const [personalData, setPersonalData] = useState(initialPersonalData);
   const [experienceViewFormData, setExperienceViewFormData] = useState(
     initialExperienceFormData
   );
@@ -88,6 +102,17 @@ export default function AdminView() {
         <AdminAboutView
           formData={aboutViewFormData}
           setFormData={setAboutViewFormData}
+          handleSaveData={handleSaveData}
+        />
+      ),
+    },
+    {
+      id: "personal",
+      label: "personal",
+      component: (
+        <AdminPersonal
+          formData={personalData}
+          setFormData={setPersonalData}
           handleSaveData={handleSaveData}
         />
       ),
@@ -134,6 +159,7 @@ export default function AdminView() {
       component: <AdminContactView data={allData && allData?.contact} />,
     },
   ];
+
   async function extractAllDatas() {
     const response = await getData(currentSelectedTab);
 
@@ -156,6 +182,15 @@ export default function AdminView() {
       setAboutViewFormData(response && response.data[0]);
       setUpdate(true);
     }
+    if (
+      currentSelectedTab === "personal" &&
+      response &&
+      response.data &&
+      response.data.length
+    ) {
+      setPersonalData(response && response.data[0]);
+      setUpdate(true);
+    }
 
     if (response?.success) {
       setAllData({
@@ -171,6 +206,7 @@ export default function AdminView() {
     const dataMap = {
       home: homeViewFormData,
       about: aboutViewFormData,
+      personal: personalData,
       education: educationViewFormData,
       experience: experienceViewFormData,
       project: projectViewFormData,
@@ -196,6 +232,7 @@ export default function AdminView() {
   function resetFormDatas() {
     setHomeViewFormData(initialHomeFormData);
     setAboutViewFormData(initialAboutFormData);
+    setPersonalData(initialPersonalData);
     setExperienceViewFormData(initialExperienceFormData);
     setEducationViewFormData(initialEducationFormData);
     setProjectViewFormData(initialProjectFormData);

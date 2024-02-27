@@ -55,10 +55,12 @@ import ClientProjectView from "@/components/client-view/project";
 import { extractAllDatas, getData } from "@/services";
 
 import React from "react";
+import PersonalInfo from "../client-view/about/personalInfo";
 
 export default async function ExtractAllData() {
   const homeSectionData = await extractAllDatas("home");
   const aboutSectionData = await extractAllDatas("about");
+  // const personalSectionData = await extractAllDatas("personal");
   const experienceSectionData = await extractAllDatas("experience");
   const educationSectionData = await extractAllDatas("education");
   const projectSectionData = await extractAllDatas("project");
@@ -69,12 +71,13 @@ export default async function ExtractAllData() {
           homeSectionData && homeSectionData.length ? homeSectionData[0] : []
         }
       ></ClientHomeView>
-      {/* <ClientAboutView
+
+      <ClientAboutView
         data={
           aboutSectionData && aboutSectionData.length ? aboutSectionData[0] : []
         }
       ></ClientAboutView>
-      <ClientProjectView
+      {/* <ClientProjectView
         educationData={
           educationSectionData && educationSectionData
             ? educationSectionData[0]
@@ -85,13 +88,13 @@ export default async function ExtractAllData() {
             ? experienceSectionData[0]
             : []
         }
-      ></ClientProjectView>
-      <ClientExperienceView
+      ></ClientProjectView> */}
+      {/* <ClientExperienceView
         data={
           projectSectionData && projectSectionData ? projectSectionData[0] : []
         }
-      ></ClientExperienceView>
-      <ClientContactView></ClientContactView> */}
+      ></ClientExperienceView> */}
+      {/* <ClientContactView></ClientContactView> */}
     </div>
   );
 }
