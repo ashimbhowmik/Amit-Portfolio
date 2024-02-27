@@ -15,13 +15,13 @@ export default function ClientHomeView({ data }) {
             clipPath: "polygon(0 0, 38% 0, 87% 100%, 0% 100%)",
           }}
         ></div>
-        <div className="absolute  left-[50px] top-[40px] ">
-          <div className="2xl:h-[170px] 2xl:w-[680px] bg-black rounded-t-[40px]"></div>
+        <div className="absolute  left-[50px] top-[40px] rounded-[40px]  shadow-lg">
+          <div className="2xl:h-[170px] 2xl:w-[680px] bg-black rounded-t-[40px] shadow-lg"></div>
           <Image
             src={img}
             alt=""
             objectFit="cover"
-            className="rounded-b-[40px] 2xl:h-[740px] 2xl:w-[680px] xl:h-[450px] "
+            className="rounded-b-[40px] 2xl:h-[740px] 2xl:w-[680px] xl:h-[450px] shadow-lg"
           />
         </div>
       </div>

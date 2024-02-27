@@ -1,29 +1,62 @@
 "use client";
 
 export default function PersonalInfo({ personalDataInfo }) {
-  console.log(personalDataInfo);
   return (
-    <div>
+    <div className="mt-[60px]">
       <h1 className="text-3xl uppercase font-bold">Personal Infos</h1>
-      <main>
-        <section>
-          <div className="mt-10 flex gap-5">
-            <div className="">
-              <p>{personalDataInfo?.name}</p>
-              <p>{personalDataInfo?.age}</p>
-              <p>{personalDataInfo?.nationality}</p>
-              <p>{personalDataInfo?.work}</p>
-              <p>{personalDataInfo?.phone}</p>
+      <main className="flex gap-10">
+        <section className="w-[60%]">
+          <div className="mt-10 flex gap-44 items-center">
+            <div className="space-y-5">
+              <p className="text-slate-400 font-semibold">
+                Name :{" "}
+                <span className="text-white">{personalDataInfo?.name}</span>
+              </p>
+              <p className="text-slate-400 font-semibold">
+                Age :{" "}
+                <span className="text-white">
+                  {personalDataInfo?.age} Years
+                </span>
+              </p>
+              <p className="text-slate-400 font-semibold">
+                Nationality :{" "}
+                <span className="text-white">
+                  {personalDataInfo?.nationality}
+                </span>
+              </p>
+              <p className="text-slate-400 font-semibold">
+                Work :{" "}
+                <span className="text-white">{personalDataInfo?.work}</span>
+              </p>
+              <p className="text-slate-400 font-semibold">
+                Phone :{" "}
+                <span className="text-white">{personalDataInfo?.phone}</span>
+              </p>
             </div>
-            <div>
-              <p>{personalDataInfo?.adress}</p>
-              <p>{personalDataInfo?.email}</p>
-              <p>{personalDataInfo?.github}</p>
-              <p>{personalDataInfo?.linkdn}</p>
-              <p>{personalDataInfo?.language}</p>
+            <div className="space-y-5">
+              <p className="text-slate-400 font-semibold">
+                Address :{" "}
+                <span className="text-white">{personalDataInfo?.adress}</span>
+              </p>
+              <p className="text-slate-400 font-semibold">
+                Email :{" "}
+                <span className="text-white">{personalDataInfo?.email}</span>
+              </p>
+              <p className="text-slate-400 font-semibold">
+                Github :{" "}
+                <span className="text-white">{personalDataInfo?.github}</span>
+              </p>
+              <p className="text-slate-400 font-semibold">
+                Linkedin :{" "}
+                <span className="text-white">{personalDataInfo?.linkdn}</span>
+              </p>
+              <p className="text-slate-400 font-semibold">
+                Language :{" "}
+                <span className="text-white">{personalDataInfo?.language}</span>
+              </p>
             </div>
           </div>
-          <button className="button relative ease-in-out duration-200 pl-5 border border-[#FFB400] rounded-full !mt-8 space-x-2 flex items-center">
+          <button className="button relative ease-in-out duration-200 pl-5 border border-[#FFB400] rounded-full !mt-10 space-x-2 flex items-center">
             <p className="text-xl">Download Cv</p>
             <p className="rounded-full p-3  bg-[#FFB400]">
               <svg
@@ -45,7 +78,48 @@ export default function PersonalInfo({ personalDataInfo }) {
             </p>
           </button>
         </section>
-        <section></section>
+        <section className="w-[40%] flex gap-5">
+          <div className="w-[50%] flex flex-col gap-5">
+            <div className="border-[1px] border-gray-700 p-7 space-y-2 rounded-xl">
+              <p className="text-5xl text-[#FFB400] font-bold">2+</p>
+              <div className="flex gap-3">
+                <div className="h-[2px] bg-white w-[30px] mt-3"></div>
+                <p className="text-xl flex flex-col">
+                  Years Of <span>Experience</span>
+                </p>
+              </div>
+            </div>
+            <div className="border-[1px] border-gray-700 p-7 space-y-2 rounded-xl">
+              <p className="text-5xl text-[#FFB400] font-bold">10+</p>
+              <div className="flex gap-3">
+                <div className="h-[2px] bg-white w-[30px] mt-3"></div>
+                <p className="text-xl flex flex-col">
+                  Completed <span>Projects</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="w-[50%] flex flex-col gap-5">
+            <div className="border-[1px] border-gray-700 p-7 space-y-2 rounded-xl">
+              <p className="text-5xl text-[#FFB400] font-bold">2+</p>
+              <div className="flex gap-3">
+                <div className="h-[2px] bg-white w-[30px] mt-3"></div>
+                <p className="text-xl flex flex-col">
+                  Years Of <span>Experience</span>
+                </p>
+              </div>
+            </div>
+            <div className="border-[1px] border-gray-700 p-7 space-y-2 rounded-xl">
+              <p className="text-5xl text-[#FFB400] font-bold">5+</p>
+              <div className="flex gap-3">
+                <div className="h-[2px] bg-white w-[30px] mt-3"></div>
+                <p className="text-xl flex flex-col">
+                  Certificate <span>Achive</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
