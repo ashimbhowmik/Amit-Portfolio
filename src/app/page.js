@@ -4,8 +4,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col  p-24 bg-black text-white">
-      <h1>home</h1>
+    <main className="min-h-screen  bg-[#111111] text-white">
       <ExtractAllData></ExtractAllData>
     </main>
   );

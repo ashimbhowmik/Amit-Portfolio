@@ -69,7 +69,7 @@ export default async function ExtractAllData() {
           homeSectionData && homeSectionData.length ? homeSectionData[0] : []
         }
       ></ClientHomeView>
-      <ClientAboutView
+      {/* <ClientAboutView
         data={
           aboutSectionData && aboutSectionData.length ? aboutSectionData[0] : []
         }
@@ -91,7 +91,7 @@ export default async function ExtractAllData() {
           projectSectionData && projectSectionData ? projectSectionData[0] : []
         }
       ></ClientExperienceView>
-      <ClientContactView></ClientContactView>
+      <ClientContactView></ClientContactView> */}
     </div>
   );
 }

@@ -6,7 +6,8 @@ export default function CommonLayout({ children }) {
   const pathName = usePathname();
   return (
     <>
-      {pathName !== "/admin" ? <Navbar /> : null}
+      {/* {pathName !== "/admin" ? <Navbar /> : null} */}
+      {/* <Navbar /> */}
       {children}
     </>
   );
