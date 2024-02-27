@@ -56,7 +56,7 @@ export default function ClientHomeView({ data }) {
             </button>
           </div>
           <div className="w-[25%] flex justify-end absolute top-[0px] right-[0px]">
-            {/* <Navbar /> */}
+            <Navbar />
           </div>
         </div>
       </div>
