@@ -7,8 +7,7 @@ import Button3 from "./button3";
 import Button4 from "./button4";
 import Button5 from "./button5";
 
-export default function Navber() {
-  const [view, setView] = useState("home");
+export default function Navber(view, setView) {
   return (
     <div className=" flex items-center pr-10 fixed ">
       <div className="flex flex-col space-y-5 ">

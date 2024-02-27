@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import CommonLayout from "@/components/client-view/common-layout";
+import ScrollToTopButton from "@/components/ScrollToTopButton/ScrollToTopButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <CommonLayout>{children}</CommonLayout>
+        <ScrollToTopButton></ScrollToTopButton>
       </body>
     </html>
   );
