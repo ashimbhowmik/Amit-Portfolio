@@ -19,7 +19,7 @@ export default function ClientAboutView({ data, personalDataInfo }) {
         About <span className="text-[#FFB400] ">Me</span>
       </h1>
       <PersonalInfo personalDataInfo={personalDataInfo}></PersonalInfo>
-      <div className="w-full flex justify-center mt-[80px]">
+      <div className="w-full flex justify-center mt-[100px]">
         <div className="h-[2px] bg-slate-700 w-[40%]"></div>
       </div>
       <div>
@@ -37,6 +37,10 @@ export default function ClientAboutView({ data, personalDataInfo }) {
           progress8={progress8}
         />
       </div>
+      <div className="w-full flex justify-center mt-[100px]">
+        <div className="h-[2px] bg-slate-700 w-[40%]"></div>
+      </div>
+      <div id="clientViewExperiance"></div>
     </div>
   );
 }

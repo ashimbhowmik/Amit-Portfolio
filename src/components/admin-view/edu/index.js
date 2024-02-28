@@ -30,7 +30,7 @@ const controls = [
   },
 ];
 
-export default function AdminEducationView({
+export default function AdminEdu({
   handleSaveData,
   formData,
   setFormData,

@@ -1,11 +1,18 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 import Image from "next/image";
 import img from "../../../assest/img copy.jpg";
 import styles from "./home.module.css";
 import { useState } from "react";
 import Navbar from "../navbar";
+import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { Typewriter } from "react-simple-typewriter";
 
 export default function ClientHomeView({ data }) {
+  const { text } = useTypewriter({
+    words: ["Developer", "Programmer"],
+    loop: {},
+  });
   return (
     <div className="flex" id="clientHome">
       <div className="relative w-[45%]">
@@ -29,7 +36,14 @@ export default function ClientHomeView({ data }) {
         <div className="w-full items-center flex relative">
           <div className="space-y-4 w-[75%]">
             <h1 className="text-[#FFB400] font-bold text-6xl">
-              {data?.heading}.
+              <Typewriter
+                words={["Hi There !", data.heading]}
+                loop={20}
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1000}
+              />
+              <Cursor></Cursor>
             </h1>
             <p className="font-bold text-6xl">Web Developer</p>
             <p className="text-xl text-justify">{data?.summary}</p>

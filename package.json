@@ -26,6 +26,7 @@
     "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18",
     "react-scroll": "^1.9.0",
+    "react-simple-typewriter": "^5.0.1",
     "react-slick": "^0.30.2"
   },
   "devDependencies": {

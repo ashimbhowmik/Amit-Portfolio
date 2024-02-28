@@ -2,6 +2,7 @@
 
 import AdminAboutView from "@/components/admin-view/about";
 import AdminContactView from "@/components/admin-view/contact";
+import AdminEdu from "@/components/admin-view/edu";
 import AdminEducationView from "@/components/admin-view/education";
 import AdminExperienceView from "@/components/admin-view/experience";
 import AdminHomeView from "@/components/admin-view/home";
@@ -49,6 +50,7 @@ const initialEducationFormData = {
   degree: "",
   year: "",
   college: "",
+  summary2: "",
 };
 
 const initialProjectFormData = {
@@ -73,6 +75,9 @@ export default function AdminView() {
     initialExperienceFormData
   );
   const [educationViewFormData, setEducationViewFormData] = useState(
+    initialEducationFormData
+  );
+  const [eduViewFormData, setEduViewFormData] = useState(
     initialEducationFormData
   );
   const [projectViewFormData, setProjectViewFormData] = useState(
@@ -142,6 +147,18 @@ export default function AdminView() {
       ),
     },
     {
+      id: "edu",
+      label: "edu",
+      component: (
+        <AdminEdu
+          formData={eduViewFormData}
+          handleSaveData={handleSaveData}
+          setFormData={setEduViewFormData}
+          data={allData?.edu}
+        />
+      ),
+    },
+    {
       id: "project",
       label: "Project",
       component: (
@@ -152,11 +169,6 @@ export default function AdminView() {
           data={allData?.project}
         />
       ),
-    },
-    {
-      id: "contact",
-      label: "Contact",
-      component: <AdminContactView data={allData && allData?.contact} />,
     },
   ];
 
@@ -208,6 +220,7 @@ export default function AdminView() {
       about: aboutViewFormData,
       personal: personalData,
       education: educationViewFormData,
+      edu: eduViewFormData,
       experience: experienceViewFormData,
       project: projectViewFormData,
     };
@@ -238,7 +251,7 @@ export default function AdminView() {
     setProjectViewFormData(initialProjectFormData);
   }
 
-  console.log(allData, homeViewFormData, "homeViewFormData");
+  // console.log(allData, homeViewFormData, "homeViewFormData");
 
   useEffect(() => {
     setAuthUser(JSON.parse(sessionStorage.getItem("authUser")));

@@ -1,8 +1,16 @@
 "use client";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 export default function PersonalInfo({ personalDataInfo }) {
+  useEffect(() => {
+    AOS.init({});
+  }, []);
+
   return (
-    <div className="mt-[60px]">
+    <div className="mt-[100px]">
       <h1 className="text-3xl uppercase font-bold">Personal Infos</h1>
       <main className="flex gap-10">
         <section className="w-[60%]">
@@ -80,7 +88,10 @@ export default function PersonalInfo({ personalDataInfo }) {
         </section>
         <section className="w-[40%] flex gap-5">
           <div className="w-[50%] flex flex-col gap-5">
-            <div className="border-[1px] border-gray-700 p-7 space-y-2 rounded-xl">
+            <div
+              className="border-[1px] border-gray-700 p-7 space-y-2 rounded-xl hover:border-[#FFB400] "
+              data-aos="zoom-in"
+            >
               <p className="text-5xl text-[#FFB400] font-bold">2+</p>
               <div className="flex gap-3">
                 <div className="h-[2px] bg-white w-[30px] mt-3"></div>
@@ -89,7 +100,10 @@ export default function PersonalInfo({ personalDataInfo }) {
                 </p>
               </div>
             </div>
-            <div className="border-[1px] border-gray-700 p-7 space-y-2 rounded-xl">
+            <div
+              className="border-[1px] border-gray-700 p-7 space-y-2 rounded-xl hover:border-[#FFB400] "
+              data-aos="zoom-in"
+            >
               <p className="text-5xl text-[#FFB400] font-bold">10+</p>
               <div className="flex gap-3">
                 <div className="h-[2px] bg-white w-[30px] mt-3"></div>
@@ -100,7 +114,10 @@ export default function PersonalInfo({ personalDataInfo }) {
             </div>
           </div>
           <div className="w-[50%] flex flex-col gap-5">
-            <div className="border-[1px] border-gray-700 p-7 space-y-2 rounded-xl">
+            <div
+              className="border-[1px] border-gray-700 p-7 space-y-2 rounded-xl hover:border-[#FFB400] "
+              data-aos="zoom-in"
+            >
               <p className="text-5xl text-[#FFB400] font-bold">2+</p>
               <div className="flex gap-3">
                 <div className="h-[2px] bg-white w-[30px] mt-3"></div>
@@ -109,7 +126,10 @@ export default function PersonalInfo({ personalDataInfo }) {
                 </p>
               </div>
             </div>
-            <div className="border-[1px] border-gray-700 p-7 space-y-2 rounded-xl">
+            <div
+              className="border-[1px] border-gray-700 p-7 space-y-2 rounded-xl hover:border-[#FFB400] "
+              data-aos="zoom-in"
+            >
               <p className="text-5xl text-[#FFB400] font-bold">5+</p>
               <div className="flex gap-3">
                 <div className="h-[2px] bg-white w-[30px] mt-3"></div>
