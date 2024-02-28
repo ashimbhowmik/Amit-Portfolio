@@ -61,7 +61,7 @@ export default function CircularProgressBar({
           <p className="text-center mt-6">REACT JS</p>
         </div>
       </section>
-      <section className="w-full flex justify-evenly items-center mt-20">
+      <section className="w-full flex justify-evenly items-center mt-24">
         <div style={{ width: 130, height: 130 }}>
           <CircularProgressbar
             value={progress5}

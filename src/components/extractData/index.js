@@ -32,7 +32,7 @@ export default async function ExtractAllData() {
             : []
         }
       ></ClientAboutView>
-      {/* <ClientProjectView
+      <ClientProjectView
         educationData={
           educationSectionData && educationSectionData
             ? educationSectionData[0]
@@ -43,13 +43,13 @@ export default async function ExtractAllData() {
             ? experienceSectionData[0]
             : []
         }
-      ></ClientProjectView> */}
-      {/* <ClientExperienceView
+      ></ClientProjectView>
+      <ClientExperienceView
         data={
           projectSectionData && projectSectionData ? projectSectionData[0] : []
         }
-      ></ClientExperienceView> */}
-      {/* <ClientContactView></ClientContactView> */}
+      ></ClientExperienceView>
+      <ClientContactView></ClientContactView>
     </div>
   );
 }

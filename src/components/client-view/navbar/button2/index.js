@@ -1,26 +1,37 @@
 "use client";
+import { useRef, useContext, useState, useEffect } from "react";
+import { GlobalContext } from "@/context/GlobalContext";
 
-import { useState } from "react";
-
-export default function Button2({ view, setView }) {
+export default function Button2({ view }) {
   const [aboutName, setAboutName] = useState(false);
+  const aboutRef = useRef(null);
+  const { setView } = useContext(GlobalContext);
+
+  useEffect(() => {
+    aboutRef.current = document.querySelector(
+      ".text-center.text-6xl.uppercase.font-bold"
+    );
+  }, []);
+
+  const handleScroll = () => {
+    // Scroll to the parent element of ClientProjectView
+    aboutRef.current.parentElement.scrollIntoView({ behavior: "smooth" });
+    setView("about");
+  };
 
   return (
     <div className=" flex items-center justify-end">
-      <div className="flex flex-col space-y-3 ">
+      <div className="flex flex-col space-y-3">
         <div
           className={`flex justify-end  bg-[#313131] items-center rounded-full  ${
             aboutName ? "bg-[#FFB400] " : ""
           }`}
         >
           <button
-            // className="button relative ease-in-out duration-200 flex gap-2 justify-end"
-            className={` button relative flex gap-2 justify-end p-3 rounded-full items-center font-bold ${
-              view === "about" ? "bg-[#FFB400] text-white" : ""
+            className={` button relative flex gap-2 justify-end p-3 rounded-full items-center  font-bold ${
+              view === "about" ? "bg-[#FFB400]  text-white" : ""
             }`}
-            onClick={() => {
-              setView("about");
-            }}
+            onClick={handleScroll}
             onMouseEnter={() => setAboutName(true)}
             onMouseLeave={() => setAboutName(false)}
           >

@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import CommonLayout from "@/components/client-view/common-layout";
 import ScrollToTopButton from "@/components/ScrollToTopButton/ScrollToTopButton";
+import GlobalState from "@/context/GlobalContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,8 +15,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <CommonLayout>{children}</CommonLayout>
-        <ScrollToTopButton></ScrollToTopButton>
+        <GlobalState>
+          <CommonLayout>{children}</CommonLayout>
+          <ScrollToTopButton></ScrollToTopButton>
+        </GlobalState>
       </body>
     </html>
   );

@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useContext, useRef, useState } from "react";
 import PersonalInfo from "./personalInfo";
 import CircularProgressBar from "./circularProgressBar";
 
@@ -12,10 +12,11 @@ export default function ClientAboutView({ data, personalDataInfo }) {
   const [progress6, setProgress6] = useState(45);
   const [progress7, setProgress7] = useState(70);
   const [progress8, setProgress8] = useState(70);
+
   return (
     <div className="pt-[70px] min-h-screen container mx-auto">
       <h1 className="text-center text-6xl uppercase font-bold">
-        About <span className="text-[#FFB400]">Me</span>
+        About <span className="text-[#FFB400] ">Me</span>
       </h1>
       <PersonalInfo personalDataInfo={personalDataInfo}></PersonalInfo>
       <div className="w-full flex justify-center mt-[80px]">

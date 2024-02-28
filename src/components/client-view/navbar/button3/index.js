@@ -1,9 +1,23 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useContext, useState, useEffect } from "react";
+import { GlobalContext } from "@/context/GlobalContext";
 
-export default function Button3({ view, setView }) {
+export default function Button3({ view }) {
   const [showEdu, setShowEdu] = useState(false);
+  const aboutRef = useRef(null);
+  const { setView } = useContext(GlobalContext);
+
+  useEffect(() => {
+    aboutRef.current = document.querySelector(
+      ".text-center.text-6xl.uppercase.font-bold"
+    );
+  }, []);
+
+  const handleScroll = () => {
+    aboutRef.current.scrollIntoView({ behavior: "smooth" });
+    setView("project");
+  };
 
   return (
     <div className=" flex items-center justify-end">
