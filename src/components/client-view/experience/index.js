@@ -25,7 +25,7 @@ export default function ClientExperienceView({
           {educationData?.map((item) => (
             <EducationCard key={item.id} item={item}></EducationCard>
           ))}
-          <p className="bg-[#111111] h-[10px] absolute bottom-0 w-full "></p>
+          <p className="bg-[#111111] h-[22px] absolute bottom-0 w-full "></p>
         </div>
       </section>
     </section>
