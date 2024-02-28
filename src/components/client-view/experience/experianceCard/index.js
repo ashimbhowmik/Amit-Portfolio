@@ -1,7 +1,17 @@
+"use client";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 export default function ExperianceCard({ item }) {
-  //   console.log(item);
+  console.log(item);
+  useEffect(() => {
+    AOS.init({});
+  }, []);
+
   return (
-    <section className="">
+    <section className="" data-aos="zoom-in-up">
       <div className="flex justify-center border-b border-slate-600 bg-[#1d1d1d] ">
         <div className="bg-[#FFB400] w-[1%] py-5"></div>
         <div

@@ -135,20 +135,8 @@ export default function AdminView() {
       ),
     },
     {
-      id: "education",
-      label: "Education",
-      component: (
-        <AdminEducationView
-          formData={educationViewFormData}
-          handleSaveData={handleSaveData}
-          setFormData={setEducationViewFormData}
-          data={allData?.education}
-        />
-      ),
-    },
-    {
       id: "edu",
-      label: "edu",
+      label: "Education",
       component: (
         <AdminEdu
           formData={eduViewFormData}

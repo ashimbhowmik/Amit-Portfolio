@@ -1,7 +1,17 @@
+"use client";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 export default function EducationCard({ item }) {
   //   console.log(item);
+  useEffect(() => {
+    AOS.init({});
+  }, []);
+
   return (
-    <section className="">
+    <section className=" " data-aos="zoom-in-up">
       <div className="flex justify-center border-b border-slate-600 bg-[#1d1d1d] ">
         <div className="bg-[#FFB400] w-[1%] py-5"></div>
         <div
@@ -10,17 +20,15 @@ export default function EducationCard({ item }) {
             clipPath: "polygon(0% 0%, 60% 0, 88% 18%, 60% 37%, 0 38%)",
           }}
         ></div>
-        <div className="w-[99%] pl-5 py-5 mb-2">
-          <h1>{item.degree}</h1>
-          <div>
-            <p>{item.college}</p>
-            <p>{item.year}</p>
+        <div className="w-[99%] pl-5 py-5 mb-2  space-y-3">
+          <h1 className="text-2xl font-bold">{item.degree}</h1>
+          <div className=" flex items-center text-slate-300 text-sm">
+            <p className="">{item.college}</p>
+            <span className="px-2">/</span>
+            <p className="">{item.year}</p>
           </div>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia
-            quam, aperiam velit quidem ut adipisci. Nesciunt tenetur iste
-            aliquid nihil error voluptate laborum esse id, deserunt, sequi
-            repellat. Labore, quis praesentium? Ducimus
+          <p className="text-justify pr-10 text-slate-300 text-sm">
+            {item.samary2}
           </p>
         </div>
       </div>

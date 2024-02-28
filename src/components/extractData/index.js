@@ -13,7 +13,7 @@ export default async function ExtractAllData() {
   const aboutSectionData = await extractAllDatas("about");
   const personalSectionData = await extractAllDatas("personal");
   const experienceSectionData = await extractAllDatas("experience");
-  const educationSectionData = await extractAllDatas("education");
+  const educationSectionData = await extractAllDatas("edu");
   const projectSectionData = await extractAllDatas("project");
   return (
     <div className="pb-10">
