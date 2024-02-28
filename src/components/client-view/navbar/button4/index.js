@@ -1,12 +1,19 @@
-"use client";
+import React, { useContext, useState } from "react";
+import { GlobalContext } from "@/context/GlobalContext";
 
-import { useState } from "react";
-
-export default function Button4({ view, setView }) {
+export default function Button4() {
+  const { view, setView } = useContext(GlobalContext);
   const [showProject, setShowProject] = useState(false);
 
+  const scrollToProject = () => {
+    document.getElementById("clientProjectView").scrollIntoView({
+      behavior: "smooth",
+    });
+    setView("project");
+  };
+
   return (
-    <div className=" flex items-center justify-end">
+    <div className="flex items-center justify-end">
       <div className="flex flex-col space-y-3 ">
         <div
           className={`flex justify-end  bg-[#313131] items-center rounded-full  ${
@@ -17,9 +24,7 @@ export default function Button4({ view, setView }) {
             className={` button relative flex gap-2 justify-end p-3 rounded-full items-center  font-bold ${
               view === "project" ? "bg-[#FFB400]  text-white" : ""
             }`}
-            onClick={() => {
-              setView("project");
-            }}
+            onClick={scrollToProject}
             onMouseEnter={() => setShowProject(true)}
             onMouseLeave={() => setShowProject(false)}
           >

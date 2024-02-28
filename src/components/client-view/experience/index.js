@@ -2,8 +2,62 @@
 
 export default function ClientExperienceView() {
   return (
-    <div>
-      <h1>Client Experience</h1>
+    <div id="clientViewExperiance">
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
+      <h1>Hi</h1>
     </div>
   );
 }

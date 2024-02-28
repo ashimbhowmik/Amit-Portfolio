@@ -17,6 +17,7 @@
     "@fullhuman/postcss-purgecss": "^5.0.0",
     "@mui/lab": "^5.0.0-alpha.166",
     "@mui/material": "^5.15.11",
+    "aos": "^2.3.4",
     "bcryptjs": "^2.4.3",
     "framer-motion": "^11.0.6",
     "mongoose": "^8.2.0",

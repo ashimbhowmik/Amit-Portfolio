@@ -4,6 +4,12 @@ import { useState } from "react";
 
 export default function Button1({ view, setView }) {
   const [showName, setShowName] = useState(false);
+  const scrollToProject = () => {
+    document.getElementById("clientHome").scrollIntoView({
+      behavior: "smooth",
+    });
+    setView("home");
+  };
 
   return (
     <div className=" flex items-center justify-end">
@@ -17,9 +23,7 @@ export default function Button1({ view, setView }) {
             className={`button relative flex gap-2 justify-end p-3 rounded-full items-center font-bold ${
               view === "home" ? "bg-[#FFB400] text-white" : ""
             }`}
-            onClick={() => {
-              setView("home");
-            }}
+            onClick={scrollToProject}
             onMouseEnter={() => setShowName(true)}
             onMouseLeave={() => setShowName(false)}
           >

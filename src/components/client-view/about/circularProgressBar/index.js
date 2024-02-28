@@ -1,7 +1,12 @@
 // CircularProgressBar.js
+"use client";
+
 import React from "react";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function CircularProgressBar({
   progress1,
@@ -13,9 +18,16 @@ export default function CircularProgressBar({
   progress7,
   progress8,
 }) {
+  useEffect(() => {
+    AOS.init({});
+  }, []);
+
   return (
     <div className="pb-14">
-      <section className="w-full flex justify-evenly items-center ">
+      <section
+        className="w-full flex justify-evenly items-center "
+        data-aos="fade-right"
+      >
         <div style={{ width: 130, height: 130 }}>
           <CircularProgressbar
             value={progress1}
@@ -61,7 +73,10 @@ export default function CircularProgressBar({
           <p className="text-center mt-6">REACT JS</p>
         </div>
       </section>
-      <section className="w-full flex justify-evenly items-center mt-24">
+      <section
+        className="w-full flex justify-evenly items-center mt-24"
+        data-aos="fade-left"
+      >
         <div style={{ width: 130, height: 130 }}>
           <CircularProgressbar
             value={progress5}

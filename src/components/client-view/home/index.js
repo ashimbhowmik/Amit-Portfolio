@@ -7,7 +7,7 @@ import Navbar from "../navbar";
 
 export default function ClientHomeView({ data }) {
   return (
-    <div className="flex">
+    <div className="flex" id="clientHome">
       <div className="relative w-[45%]">
         <div
           className="bg-[#FFB400] w-[600px] min-h-screen absolute"

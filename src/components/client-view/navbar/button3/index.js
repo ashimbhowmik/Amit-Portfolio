@@ -3,20 +3,15 @@
 import { useRef, useContext, useState, useEffect } from "react";
 import { GlobalContext } from "@/context/GlobalContext";
 
-export default function Button3({ view }) {
+export default function Button3() {
   const [showEdu, setShowEdu] = useState(false);
-  const aboutRef = useRef(null);
-  const { setView } = useContext(GlobalContext);
+  const { view, setView } = useContext(GlobalContext);
 
-  useEffect(() => {
-    aboutRef.current = document.querySelector(
-      ".text-center.text-6xl.uppercase.font-bold"
-    );
-  }, []);
-
-  const handleScroll = () => {
-    aboutRef.current.scrollIntoView({ behavior: "smooth" });
-    setView("project");
+  const scrollToProject = () => {
+    document.getElementById("clientViewExperiance").scrollIntoView({
+      behavior: "smooth",
+    });
+    setView("education");
   };
 
   return (
@@ -31,9 +26,7 @@ export default function Button3({ view }) {
             className={` button relative flex gap-2 justify-end p-3 rounded-full items-center font-bold ${
               view === "education" ? "bg-[#FFB400] text-white" : ""
             }`}
-            onClick={() => {
-              setView("education");
-            }}
+            onClick={scrollToProject}
             onMouseEnter={() => setShowEdu(true)}
             onMouseLeave={() => setShowEdu(false)}
           >
