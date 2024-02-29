@@ -1,6 +1,7 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function ClientContactView() {
   const form = useRef();
@@ -14,7 +15,9 @@ export default function ClientContactView() {
       })
       .then(
         () => {
-          console.log("SUCCESS!");
+          const notify = () => toast.success("Email Send Sucsefully");
+          notify();
+          form.current.reset();
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -71,6 +74,7 @@ export default function ClientContactView() {
               ></textarea>
             </div>
             <input
+              // onClick={notify}
               className="bg-[#FDB300] text-black rounded-lg font-semibold px-8 py-4 cursor-pointer ease-in-out duration-300 hover:bg-black hover:text-white hover:px-9 hover:py-5 hover:shadow-red-600  hover:shadow-md"
               type="submit"
               value="Send Massage"
@@ -175,6 +179,7 @@ export default function ClientContactView() {
           </div>
         </section>
       </main>
+      <Toaster />
     </div>
   );
 }
