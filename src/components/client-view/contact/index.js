@@ -1,6 +1,26 @@
 "use client";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function ClientContactView() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_0ujx1up", "template_lhlhin3", form.current, {
+        publicKey: "G1u6oCLMeEcuhMoTz",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        }
+      );
+  };
   return (
     <div className="container min-h-screen mx-auto mt-[80px]">
       <h1 className="text-center text-6xl font-bold mb-[100px] ">
@@ -9,47 +29,53 @@ export default function ClientContactView() {
       <main className="flex gap-16">
         <section className="w-[55%] space-y-7">
           <h1 className="text-3xl font-semibold">Message Me</h1>
-          <div className="flex">
+          <form ref={form} onSubmit={sendEmail} action="" className="space-y-7">
+            <div className="flex">
+              <div className="flex-1">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  name="to_name"
+                  className="py-3 px-4 rounded-md bg-[#262626] text-slate-300  w-[95%]"
+                  required
+                ></input>
+              </div>
+              <div className="flex-1 justify-end flex">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  name="from_email"
+                  className="py-3 px-4 rounded-md bg-[#262626] text-slate-300 w-[95%]"
+                  required
+                ></input>
+              </div>
+            </div>
             <div className="flex-1">
               <input
                 type="text"
-                placeholder="Name"
-                className="py-3 px-4 rounded-md bg-[#262626] text-slate-300  w-[95%]"
+                placeholder="Subject"
+                name="subject_name"
+                className="py-3 px-4 rounded-md bg-[#262626] text-slate-300  w-full"
                 required
               ></input>
             </div>
-            <div className="flex-1 justify-end flex">
-              <input
-                type="email"
-                placeholder="Email"
-                className="py-3 px-4 rounded-md bg-[#262626] text-slate-300 w-[95%]"
+            <div className="flex-1">
+              <textarea
+                type="text"
+                placeholder="Massage"
+                rows="6"
+                cols="50"
+                name="message"
+                className="py-3 px-4 rounded-md bg-[#262626] text-slate-300 w-full"
                 required
-              ></input>
+              ></textarea>
             </div>
-          </div>
-          <div className="flex-1">
             <input
-              type="text"
-              placeholder="Subject"
-              className="py-3 px-4 rounded-md bg-[#262626] text-slate-300  w-full"
-              required
-            ></input>
-          </div>
-          <div className="flex-1">
-            <textarea
-              type="text"
-              placeholder="Massage"
-              rows="6"
-              cols="50"
-              className="py-3 px-4 rounded-md bg-[#262626] text-slate-300 w-full"
-              required
-            ></textarea>
-          </div>
-          <input
-            className="bg-[#FDB300] text-black rounded-lg font-semibold px-8 py-4 cursor-pointer ease-in-out duration-300 hover:bg-black hover:text-white hover:px-9 hover:py-5 hover:shadow-red-600  hover:shadow-md"
-            type="submit"
-            value="Send Massage"
-          />
+              className="bg-[#FDB300] text-black rounded-lg font-semibold px-8 py-4 cursor-pointer ease-in-out duration-300 hover:bg-black hover:text-white hover:px-9 hover:py-5 hover:shadow-red-600  hover:shadow-md"
+              type="submit"
+              value="Send Massage"
+            />
+          </form>
         </section>
         <section className="w-[45%] space-y-7">
           <h1 className="text-3xl font-semibold ">Contact Info</h1>
@@ -96,39 +122,32 @@ export default function ClientContactView() {
               <p className="mt-9">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="icon icon-tabler icon-tabler-phone-call"
-                  width="40"
-                  height="40"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  className="text-[#FDB300]"
+                  fill="currentColor"
+                  className="w-10 h-10 text-[#FDB300]"
                 >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
-                  <path d="M15 7a2 2 0 0 1 2 2" />
-                  <path d="M15 3a6 6 0 0 1 6 6" />
+                  <path d="M10.5 18.75a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5h-3Z" />
+                  <path
+                    fillRule="evenodd"
+                    d="M8.625.75A3.375 3.375 0 0 0 5.25 4.125v15.75a3.375 3.375 0 0 0 3.375 3.375h6.75a3.375 3.375 0 0 0 3.375-3.375V4.125A3.375 3.375 0 0 0 15.375.75h-6.75ZM7.5 4.125C7.5 3.504 8.004 3 8.625 3H9.75v.375c0 .621.504 1.125 1.125 1.125h2.25c.621 0 1.125-.504 1.125-1.125V3h1.125c.621 0 1.125.504 1.125 1.125v15.75c0 .621-.504 1.125-1.125 1.125h-6.75A1.125 1.125 0 0 1 7.5 19.875V4.125Z"
+                    clipRule="evenodd"
+                  />
                 </svg>
               </p>
               <p className="mt-8">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="icon icon-tabler icon-tabler-location"
-                  width="40"
-                  height="40"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  className="text-[#FDB300]"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-10 h-10 text-[#FDB300]"
                 >
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                  <path d="M21 3l-6.5 18a.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a.55 .55 0 0 1 0 -1l18 -6.5" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 1 0-2.636 6.364M16.5 12V8.25"
+                  />
                 </svg>
               </p>
             </div>
