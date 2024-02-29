@@ -2,8 +2,7 @@
 "use client";
 
 import React, { useState } from "react";
-import img1 from "../../../assest/1.png";
-import Image from "next/image";
+
 import ProjectCard from "./projectCard";
 
 export default function ClientProjectView({ data }) {
@@ -24,8 +23,8 @@ export default function ClientProjectView({ data }) {
               <ProjectCard key={item.id} item={item}></ProjectCard>
             ))
           : data
-              .slice(0, 4)
-              .map((item) => (
+              ?.slice(0, 4)
+              ?.map((item) => (
                 <ProjectCard key={item.id} item={item}></ProjectCard>
               ))}
       </div>

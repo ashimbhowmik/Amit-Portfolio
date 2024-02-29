@@ -2,6 +2,7 @@
 import { useContext, useRef, useState } from "react";
 import PersonalInfo from "./personalInfo";
 import CircularProgressBar from "./circularProgressBar";
+import ServiceClient from "./clientService";
 
 export default function ClientAboutView({ data, personalDataInfo }) {
   const [progress1, setProgress1] = useState(80);
@@ -23,7 +24,7 @@ export default function ClientAboutView({ data, personalDataInfo }) {
         <div className="h-[2px] bg-slate-700 w-[40%]"></div>
       </div>
       <div>
-        <h1 className="text-center text-3xl uppercase font-bold mt-[80px] mb-14">
+        <h1 className="text-center text-3xl uppercase font-bold mt-[80px] mb-[70px]">
           My Skill
         </h1>
         <CircularProgressBar
@@ -37,6 +38,10 @@ export default function ClientAboutView({ data, personalDataInfo }) {
           progress8={progress8}
         />
       </div>
+      <div className="w-full flex justify-center mt-[100px]">
+        <div className="h-[2px] bg-slate-700 w-[40%]"></div>
+      </div>
+      <ServiceClient></ServiceClient>
       <div className="w-full flex justify-center mt-[100px]">
         <div className="h-[2px] bg-slate-700 w-[40%]"></div>
       </div>

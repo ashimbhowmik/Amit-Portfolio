@@ -9,7 +9,7 @@ import { useEffect } from "react";
 import React from "react";
 
 export default function ProjectCard({ item }) {
-  console.log(item);
+  //   console.log(item);
   useEffect(() => {
     AOS.init({});
   }, []);
@@ -26,7 +26,9 @@ export default function ProjectCard({ item }) {
               <h1 className="text-2xl font-bold">{item.name}</h1>
               <p className="text-justify text-slate-300">
                 {item.samary.split(" ").slice(0, 25).join(" ")}
-                {item.samary.split(" ").length > 25 && "..."}
+                <span className="text-[#FFB400]">
+                  {item.samary.split(" ").length > 25 && " see more..."}
+                </span>
               </p>
             </div>
 

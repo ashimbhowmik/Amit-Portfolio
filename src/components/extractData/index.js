@@ -4,7 +4,6 @@ import ClientExperienceView from "@/components/client-view/experience";
 import ClientHomeView from "@/components/client-view/home";
 import ClientProjectView from "@/components/client-view/project";
 import { extractAllDatas, getData } from "@/services";
-import PersonalInfo from "../client-view/about/personalInfo";
 
 import React from "react";
 
@@ -37,7 +36,6 @@ export default async function ExtractAllData() {
         experienceData={experienceSectionData}
       ></ClientExperienceView>
       <ClientProjectView data={projectSectionData}></ClientProjectView>
-
       <ClientContactView></ClientContactView>
     </div>
   );
