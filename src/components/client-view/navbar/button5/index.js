@@ -5,6 +5,13 @@ import { useState } from "react";
 export default function Button5({ view, setView }) {
   const [showContact, setShowContact] = useState(false);
 
+  const scrollToProject = () => {
+    document.getElementById("clientContact").scrollIntoView({
+      behavior: "smooth",
+    });
+    setView("contact");
+  };
+
   return (
     <div className=" flex items-center justify-end">
       <div className="flex flex-col space-y-3 ">
@@ -17,9 +24,7 @@ export default function Button5({ view, setView }) {
             className={` button relative flex gap-2 justify-end p-3 rounded-full items-center font-bold ${
               view === "contact" ? "bg-[#FFB400] text-white" : ""
             }`}
-            onClick={() => {
-              setView("contact");
-            }}
+            onClick={scrollToProject}
             onMouseEnter={() => setShowContact(true)}
             onMouseLeave={() => setShowContact(false)}
           >

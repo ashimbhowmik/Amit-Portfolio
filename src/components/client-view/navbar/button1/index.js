@@ -20,8 +20,8 @@ export default function Button1({ view, setView }) {
           }`}
         >
           <button
-            className={`button relative flex gap-2 justify-end p-3 rounded-full items-center font-bold ${
-              view === "home" ? "bg-[#FFB400] text-white" : ""
+            className={`button relative flex gap-2 justify-end p-3 rounded-full items-center  font-bold ${
+              view === "home" ? "bg-[#FFB400] text-white " : ""
             }`}
             onClick={scrollToProject}
             onMouseEnter={() => setShowName(true)}

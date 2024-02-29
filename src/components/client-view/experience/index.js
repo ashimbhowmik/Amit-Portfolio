@@ -28,6 +28,10 @@ export default function ClientExperienceView({
           <p className="bg-[#111111] h-[22px] absolute bottom-0 w-full "></p>
         </div>
       </section>
+      <div className="w-full flex justify-center mt-[100px]">
+        <div className="h-[2px] bg-slate-700 w-[40%]"></div>
+      </div>
+      <div id="clientProjectView"></div>
     </section>
   );
 }

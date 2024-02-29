@@ -65,7 +65,13 @@ export default function PersonalInfo({ personalDataInfo }) {
             </div>
           </div>
           <button className="button relative ease-in-out duration-200 pl-5 border border-[#FFB400] rounded-full !mt-10 space-x-2 flex items-center">
-            <p className="text-xl">Download Cv</p>
+            <a
+              href="https://drive.google.com/file/d/1qEXX5dgEHUCw5Rd0D-VShmxgFeQjXRoJ/view?usp=sharing"
+              className="text-xl"
+              target="_blank"
+            >
+              Download Cv
+            </a>
             <p className="rounded-full p-3  bg-[#FFB400]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
