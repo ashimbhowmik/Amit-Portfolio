@@ -4,23 +4,39 @@
 import React from "react";
 
 export default function ProjectCard({ item }) {
-  console.log(item);
+  //   console.log(item);
   return (
     <div className=" ">
-      <main></main>
+      <main>
+        <section className="flex border rounded-lg pt-10 pl-6">
+          <div className="w-[60%] space-y-4">
+            <div className="space-y-4">
+              <h1 className="text-2xl font-bold">{item.name}</h1>
+              <p className="">
+                {item.samary.split(" ").slice(0, 15).join(" ")}
+                {item.samary.split(" ").length > 15 && "..."}
+              </p>
+            </div>
+
+            <div className="border flex gap-3 flex-wrap">
+              {item?.technologies.split(",").map((skill) => (
+                <div key={skill._id} className="">
+                  <p className="px-3 p-2 text-white bg-black rounded-full">
+                    {skill}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="w-[40%]">
+            <img
+              src={item.image}
+              alt="Product image"
+              className="rounded-lg h-full"
+            />
+          </div>
+        </section>
+      </main>
     </div>
   );
 }
-
-// {
-//   data?.skills.split(",").map((skill) => (
-//     <div
-//       className="w-full flex justify-center items-center"
-//       variants={skillItemVariant}
-//     >
-//       <button className="whitespace-nowrap text-ellipsis overflow-hidden py-3 w-[160px] px-6 border-[2px] border-green-main bg-[#fff] text-[#000] font-semibold rounded-lg text-xl tracking-widest hover:shadow-green-main transition-all outline-none">
-//         {skill}
-//       </button>
-//     </div>
-//   ));
-// }

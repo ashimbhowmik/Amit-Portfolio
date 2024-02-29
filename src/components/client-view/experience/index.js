@@ -9,7 +9,7 @@ export default function ClientExperienceView({
 }) {
   return (
     <section className="container mx-auto mt-[80px] mb-[80px]">
-      <h1 className="text-center text-6xl font-bold mb-[50px] ">
+      <h1 className="text-center text-6xl font-bold mb-[50px] uppercase">
         Experience <span className="text-[#FFB400] ">& Education</span>
       </h1>
       <section className="flex gap-14 mt-24">

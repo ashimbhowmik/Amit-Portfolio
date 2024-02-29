@@ -26,7 +26,7 @@ export default function ClientContactView() {
   };
   return (
     <div className="container min-h-screen mx-auto mt-[80px]">
-      <h1 className="text-center text-6xl font-bold mb-[100px] ">
+      <h1 className="text-center text-6xl font-bold mb-[100px] uppercase">
         Get in <span className="text-[#FFB400] ">Touch</span>
       </h1>
       <main className="flex gap-16">

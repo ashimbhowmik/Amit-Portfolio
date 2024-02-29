@@ -14,7 +14,7 @@ export default async function ExtractAllData() {
   const personalSectionData = await extractAllDatas("personal");
   const experienceSectionData = await extractAllDatas("experience");
   const educationSectionData = await extractAllDatas("edu");
-  const projectSectionData = await extractAllDatas("project");
+  const projectSectionData = await extractAllDatas("projects");
   return (
     <div className="pb-10">
       <ClientHomeView
