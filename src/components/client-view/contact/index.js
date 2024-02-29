@@ -74,7 +74,7 @@ export default function ClientContactView() {
               ></textarea>
             </div>
             <input
-              className=" border border-[#FDB300]  rounded-lg font-semibold px-8 py-4 cursor-pointer ease-in-out duration-300 hover:text-white hover:px-9 hover:py-5 hover:shadow-[#FDB300] hover:shadow-sm "
+              className="border-[#FDB300] border w-[200px] rounded-lg font-semibold px-8 py-4 cursor-pointer ease-in-out duration-300 hover:bg-black hover:text-white hover:px-9 hover:py-5 hover:shadow-[#FDB300]  hover:shadow-sm"
               type="submit"
               value="Send Massage"
             />
