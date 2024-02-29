@@ -36,11 +36,7 @@ export default async function ExtractAllData() {
         educationData={educationSectionData}
         experienceData={experienceSectionData}
       ></ClientExperienceView>
-      <ClientProjectView
-        data={
-          projectSectionData && projectSectionData ? projectSectionData[0] : []
-        }
-      ></ClientProjectView>
+      <ClientProjectView data={projectSectionData}></ClientProjectView>
 
       <ClientContactView></ClientContactView>
     </div>

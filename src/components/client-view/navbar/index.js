@@ -14,7 +14,7 @@ export default function Navber() {
   // Function to scroll to the About Me section
 
   return (
-    <div className=" flex items-center pr-10 fixed ">
+    <div className=" flex items-center pr-10 fixed z-50">
       <div className="flex flex-col space-y-5 ">
         <Button1 view={view} setView={setView}></Button1>
         <Button2 view={view} setView={setView}></Button2>

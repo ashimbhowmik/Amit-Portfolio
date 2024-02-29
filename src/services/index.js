@@ -79,6 +79,19 @@ export async function extractAllDatas(currentSection) {
 
   return data && data.data;
 }
+// export async function projectData() {
+//   const res = await fetch(
+//     `https://amit-portfolio-iota.vercel.app/api/project/get`,
+//     {
+//       method: "GET",
+//       cache: "no-store",
+//     }
+//   );
+
+//   const data = await res.json();
+
+//   return data && data.data;
+// }
 
 // export async function homePartData() {
 //   const res = await fetch("/api/home/get", {

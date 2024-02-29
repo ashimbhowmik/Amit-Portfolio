@@ -11,6 +11,12 @@ const controls = [
     label: "Project Name",
   },
   {
+    name: "image",
+    placeholder: "Enter Image",
+    type: "text",
+    label: "Enter Image",
+  },
+  {
     name: "technologies",
     placeholder: "Enter Technologies",
     type: "text",
@@ -24,13 +30,19 @@ const controls = [
   },
   {
     name: "github",
-    placeholder: "Description",
+    placeholder: "Github",
     type: "text",
-    label: "Description",
+    label: "Github",
+  },
+  {
+    name: "samary",
+    placeholder: "Sammary",
+    type: "text",
+    label: "Sammary",
   },
 ];
 
-export default function AdminProjectView({
+export default function AdminProjectsView({
   formData,
   setFormData,
   handleSaveData,

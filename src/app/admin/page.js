@@ -10,6 +10,7 @@ import Login from "@/components/admin-view/login";
 import AdminPersonal from "@/components/admin-view/personal";
 // import Login from "@/components/admin-view/login";
 import AdminProjectView from "@/components/admin-view/project";
+import AdminProjectsView from "@/components/admin-view/projects";
 import { addData, getData, login, updateData } from "@/services";
 import { useEffect, useState } from "react";
 
@@ -59,6 +60,14 @@ const initialProjectFormData = {
   technologies: "",
   github: "",
 };
+const initialProjectsFormData = {
+  name: "",
+  image: "",
+  website: "",
+  technologies: "",
+  github: "",
+  samary: "",
+};
 
 const initialLoginFormData = {
   username: "",
@@ -82,6 +91,9 @@ export default function AdminView() {
   );
   const [projectViewFormData, setProjectViewFormData] = useState(
     initialProjectFormData
+  );
+  const [projectsViewFormData, setProjectsViewFormData] = useState(
+    initialProjectsFormData
   );
 
   const [allData, setAllData] = useState({});
@@ -158,6 +170,18 @@ export default function AdminView() {
         />
       ),
     },
+    {
+      id: "projects",
+      label: "Projects",
+      component: (
+        <AdminProjectsView
+          formData={projectsViewFormData}
+          handleSaveData={handleSaveData}
+          setFormData={setProjectsViewFormData}
+          data={allData?.project}
+        />
+      ),
+    },
   ];
 
   async function extractAllDatas() {
@@ -211,6 +235,7 @@ export default function AdminView() {
       edu: eduViewFormData,
       experience: experienceViewFormData,
       project: projectViewFormData,
+      projects: projectsViewFormData,
     };
 
     const response = update
@@ -237,6 +262,7 @@ export default function AdminView() {
     setExperienceViewFormData(initialExperienceFormData);
     setEducationViewFormData(initialEducationFormData);
     setProjectViewFormData(initialProjectFormData);
+    setProjectsViewFormData(initialProjectsFormData);
   }
 
   // console.log(allData, homeViewFormData, "homeViewFormData");
