@@ -43,7 +43,7 @@ export default function ProjectCard({ item }) {
             </div>
 
             <button className="button relative pl-5 border mt-6 hover:bg-[#FFB400] text-slate-300 hover:text-black font-semibold ease-in-out duration-300 border-[#FFB400] rounded-full space-x-2 flex items-center ">
-              <Link href={item.website} className=" " target="_black">
+              <Link href={item.website} className=" " target="blank">
                 View Project
               </Link>
               <p className="rounded-full p-2  bg-[#FFB400]">
