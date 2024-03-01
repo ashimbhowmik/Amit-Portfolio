@@ -6,6 +6,7 @@ import ClientProjectView from "@/components/client-view/project";
 import { extractAllDatas, getData } from "@/services";
 
 import React from "react";
+import AllProject from "../client-view/allProject";
 
 export default async function ExtractAllData() {
   const homeSectionData = await extractAllDatas("home");
@@ -36,6 +37,7 @@ export default async function ExtractAllData() {
         experienceData={experienceSectionData}
       ></ClientExperienceView>
       <ClientProjectView data={projectSectionData}></ClientProjectView>
+
       <ClientContactView></ClientContactView>
     </div>
   );

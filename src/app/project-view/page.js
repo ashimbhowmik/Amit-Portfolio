@@ -1,12 +1,11 @@
-import ClientHomeView from "@/components/client-view/home";
-import ClientProjectViewPage from "@/components/clientProjectView";
-import ExtractAllData from "@/components/extractData";
-import Image from "next/image";
+import AllProject from "@/components/client-view/allProject";
+import { extractAllDatas } from "@/services";
 
-export default function ProjectView() {
+export default async function ProjectView() {
+  const projectSectionData = await extractAllDatas("projects");
   return (
     <main className="min-h-screen  bg-[#111111] text-white">
-      <ClientProjectViewPage></ClientProjectViewPage>
+      <AllProject data={projectSectionData}></AllProject>
     </main>
   );
 }
