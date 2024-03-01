@@ -1,13 +1,12 @@
 import React from "react";
 import { HashLoader } from "react-spinners";
 
-const PageLoader = ({ text, color, loading, size }) => {
+const PageLoader = ({ loading, size }) => {
   return (
     <div>
       <span className="flex gap-1 items-center">
-        {text}
         <HashLoader
-          color={color}
+          color="#FFB400"
           loading={loading}
           size={size || 130}
           data-testid="loader"

@@ -51,7 +51,7 @@ export default function ClientHomeView({ data }) {
             <p className="font-bold text-6xl">Web Developer</p>
             <p className="text-xl text-justify">{data?.summary}</p>
             <div className="flex items-center">
-              <button className="mr-5 px-4 py-3  shadow-2xl bg-black hover:shadow-sm ease-in-out duration-300 hover:shadow-[#FFB400] rounded-lg">
+              <button className="mr-5 px-4 py-3  shadow-2xl bg-black hover:shadow-sm ease-in-out duration-300 hover:shadow-[#FFB400] rounded-lg transform hover:scale-95">
                 <a
                   href="https://www.facebook.com/ashim.bhowmik.amit.2000"
                   target="_blank"
@@ -62,7 +62,7 @@ export default function ClientHomeView({ data }) {
                   />
                 </a>
               </button>
-              <button className="mr-5 px-4 py-3  shadow-2xl bg-black hover:shadow-sm ease-in-out duration-300 hover:shadow-[#FFB400] rounded-lg">
+              <button className="mr-5 px-4 py-3  shadow-2xl bg-black hover:shadow-sm ease-in-out duration-300 hover:shadow-[#FFB400] rounded-lg transform hover:scale-95">
                 <a href="https://github.com/ashimbhowmik" target="_blank">
                   <FontAwesomeIcon
                     icon={faGithub}
@@ -70,7 +70,7 @@ export default function ClientHomeView({ data }) {
                   />
                 </a>
               </button>
-              <button className="mr-5 px-4 py-3  shadow-2xl  bg-black hover:shadow-sm ease-in-out duration-300 hover:shadow-[#FFB400] rounded-lg">
+              <button className="mr-5 px-4 py-3  shadow-2xl bg-black hover:shadow-sm ease-in-out duration-300 hover:shadow-[#FFB400] rounded-lg transform hover:scale-95">
                 <a
                   href="https://www.linkedin.com/in/ashimbhowmik/"
                   target="_blank"
@@ -82,7 +82,7 @@ export default function ClientHomeView({ data }) {
                 </a>
               </button>
             </div>
-            <button className="button relative ease-in-out duration-200 pl-5 border border-[#FFB400] rounded-full !mt-8 space-x-2 flex items-center">
+            <button className="button relative pl-5 border !mt-8 hover:bg-[#FFB400] text-slate-300 hover:text-black font-semibold ease-in-out duration-300 border-[#FFB400] rounded-full space-x-2 flex items-center">
               <p className="text-xl">More About Me</p>
               <p className="rounded-full p-3  bg-[#FFB400]">
                 <svg

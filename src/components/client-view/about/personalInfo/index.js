@@ -64,7 +64,7 @@ export default function PersonalInfo({ personalDataInfo }) {
               </p>
             </div>
           </div>
-          <button className="button relative ease-in-out duration-200 pl-5 border border-[#FFB400] rounded-full !mt-10 space-x-2 flex items-center">
+          <button className="button relative pl-5 border hover:bg-[#FFB400] text-slate-300 hover:text-black font-semibold ease-in-out duration-300 border-[#FFB400] rounded-full space-x-2 flex items-center !mt-10">
             <a
               href="https://drive.google.com/file/d/1qEXX5dgEHUCw5Rd0D-VShmxgFeQjXRoJ/view?usp=sharing"
               className="text-xl"
