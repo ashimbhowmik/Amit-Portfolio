@@ -20,7 +20,7 @@ export default function ClientHomeView({ data }) {
     <div className="flex" id="clientHome">
       <div className="relative w-[45%]">
         <div
-          className="bg-[#FFB400] w-[600px] min-h-screen absolute"
+          className="bg-[#FFB400] hidden lg:block w-[600px] min-h-screen absolute"
           style={{
             clipPath: "polygon(0 0, 38% 0, 87% 100%, 0% 100%)",
           }}
@@ -104,7 +104,7 @@ export default function ClientHomeView({ data }) {
               </p>
             </button>
           </div>
-          <div className="w-[25%] flex justify-end absolute top-[0px] right-[0px]">
+          <div className="w-[25%] hidden lg:flex justify-end absolute top-[0px] right-[0px]">
             <Navbar />
           </div>
         </div>

@@ -20,7 +20,7 @@ export default function ClientProjectView({ data }) {
         <h1 className="text-center text-6xl uppercase font-bold mb-[80px]">
           My <span className="text-[#FFB400] ">Project</span>
         </h1>
-        <div className="grid grid-cols-2 gap-[40px]">
+        <div className="grid lg:grid-cols-2 grid-cols-1 gap-[40px]">
           {data?.slice(0, 4)?.map((item) => (
             <ProjectCard key={item.id} item={item}></ProjectCard>
           ))}

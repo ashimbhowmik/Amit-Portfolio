@@ -22,9 +22,9 @@ export default function ExperianceCard({ item }) {
         ></div>
         <div className="w-[99%] pl-5 py-5 mb-2 space-y-2">
           <div className="flex">
-            <h1 className="text-2xl font-bold">{item.position}</h1>
+            <h1 className="lg:text-2xl text-xl font-bold">{item.position}</h1>
             <span className="px-2 text-2xl font-bold">/</span>
-            <h1 className="text-2xl font-bold">{item.jobprofile}</h1>
+            <h1 className="lg:text-2xl text-xl font-bold">{item.jobprofile}</h1>
           </div>
           <p className="text-sm text-slate-300">{item.company}</p>
           <p className="text-sm text-slate-300">{item.location}</p>

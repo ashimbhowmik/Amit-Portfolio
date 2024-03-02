@@ -13,12 +13,12 @@ import {
 export default function ServiceClient() {
   return (
     <section>
-      <main>
+      <main className="w-[87%] mx-auto lg:w-full">
         <h1 className="text-center text-3xl uppercase font-bold mt-[70px] mb-[60px]">
           My Services
         </h1>
         <section>
-          <div className="grid grid-cols-3  gap-12 ">
+          <div className="grid lg:grid-cols-3 grid-cols-1 gap-12 ">
             <div className=" bg-[#1D1D1D] hover:border-b-[2px] border-[#FFB400] ease-in-out duration-300 transform hover:scale-110 p-10 cursor-pointer">
               <FontAwesomeIcon
                 icon={faCss3Alt}
@@ -74,7 +74,7 @@ export default function ServiceClient() {
           </div>
         </section>
         <section className="mt-12">
-          <div className="grid grid-cols-3  gap-12">
+          <div className="grid lg:grid-cols-3 grid-cols-1 gap-12">
             <div className="  bg-[#1D1D1D] hover:border-b-[2px] border-[#FFB400] ease-in-out duration-300 transform hover:scale-110 p-10 cursor-pointer">
               {/* <FontAwesomeIcon icon={faCss3Alt} className="w-10 h-10 " /> */}
               <FontAwesomeIcon

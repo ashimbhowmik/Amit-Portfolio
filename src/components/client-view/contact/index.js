@@ -25,12 +25,12 @@ export default function ClientContactView() {
       );
   };
   return (
-    <div className="container  mx-auto mt-[80px] pb-[130px]">
-      <h1 className="text-center text-6xl font-bold mb-[100px] uppercase">
+    <div className="container  mx-auto mt-[80px] lg:pb-[130px] pb-10">
+      <h1 className="text-center lg:text-6xl text-4xl font-bold lg:mb-[100px] mb-14 uppercase">
         Get in <span className="text-[#FFB400] ">Touch</span>
       </h1>
-      <main className="flex gap-16">
-        <section className="w-[55%] space-y-7">
+      <main className="lg:flex gap-16 w-[87%] lg:w-full mx-auto">
+        <section className="lg:w-[55%] space-y-7">
           <h1 className="text-3xl font-semibold">Message Me</h1>
           <form ref={form} onSubmit={sendEmail} action="" className="space-y-7">
             <div className="flex">
@@ -74,13 +74,13 @@ export default function ClientContactView() {
               ></textarea>
             </div>
             <input
-              className="border-[#FDB300] border w-[200px] rounded-lg font-semibold px-8 py-4 cursor-pointer ease-in-out duration-300 hover:bg-black hover:text-white hover:px-9 hover:py-5 hover:shadow-[#FDB300]  hover:shadow-sm"
+              className="border-[#FDB300] border lg:w-[200px] w-[170px] rounded-lg font-semibold px-8 lg:py-4 py-3 cursor-pointer ease-in-out duration-300 hover:bg-black hover:text-white hover:px-9 hover:py-5 hover:shadow-[#FDB300]  hover:shadow-sm"
               type="submit"
               value="Send Massage"
             />
           </form>
         </section>
-        <section className="w-[45%] space-y-7">
+        <section className="lg:w-[45%] mt-14 lg:mt-0 space-y-7">
           <h1 className="text-3xl font-semibold ">Contact Info</h1>
           <p className="text-slate-300 text-justify">
             Always available for freelance work if the right project comes

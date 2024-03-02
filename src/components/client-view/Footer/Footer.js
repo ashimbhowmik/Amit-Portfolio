@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <div className="py-10 bg-black">
+      <div className="py-10 bg-black px-5 lg:px-0">
         <h1 className="text-center">
           Copyright © <span className="text-[#ffcc4c]">2024</span> - All right
           reserved by{" "}
