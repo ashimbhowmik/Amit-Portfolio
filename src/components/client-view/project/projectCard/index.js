@@ -20,7 +20,7 @@ export default function ProjectCard({ item }) {
       data-aos-anchor-placement="center-bottom"
     >
       <main>
-        <section className="flex border border-[#FFB400] hover:bg-slate-900 ease-in-out duration-300  hover:border-white hover:-translate-y-4  lg:pb-4 pb-8 rounded-lg pt-10 lg:pl-6 pl-3 lg:h-[400px]  relative overflow-hidden cursor-pointer lg:pr-14">
+        <section className="flex border border-[#FFB400] hover:bg-slate-900 ease-in-out duration-300  hover:border-white hover:-translate-y-4  lg:pb-4 pb-5 rounded-lg pt-10 lg:pl-6 pl-3 lg:h-[400px]  relative overflow-hidden cursor-pointer lg:pr-14">
           <div className="w-[55%] ">
             <div className="lg:space-y-4 space-y-3">
               <h1 className="lg:text-2xl text-xl font-bold">{item.name}</h1>
@@ -30,8 +30,8 @@ export default function ProjectCard({ item }) {
                   {item.samary.split(" ").length > 25 && " see more..."}
                 </span>
               </p>
-              <p className="text-justify lg:hidden text-slate-300">
-                {item.samary.split(" ").slice(0, 15).join(" ")}
+              <p className="text-justify lg:hidden text-sm text-slate-300">
+                {item.samary.split(" ").slice(0, 10).join(" ")}
                 <span className="text-[#FFB400]">
                   {item.samary.split(" ").length > 10 && " see more..."}
                 </span>
@@ -76,7 +76,7 @@ export default function ProjectCard({ item }) {
             <img
               src={item.image}
               alt="Product image"
-              className="rounded-lg absolute lg:w-[500px] lg:h-[400px] w-[400px] h-[300px] lg:right-[-180px] right-[-230px]"
+              className="rounded-lg absolute lg:w-[500px] lg:h-[400px] w-[500px] h-[350px] lg:right-[-180px] right-[-190px]"
             />
           </div>
         </section>
