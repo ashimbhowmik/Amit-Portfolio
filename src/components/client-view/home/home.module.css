@@ -36,3 +36,14 @@
   transition: opacity 0.3s ease-in-out; /* Added transition property */
   opacity: 0; /* Start with the button name hidden */
 }
+
+.bgImage {
+  background-image: url("../../../assest/img copy.jpg"),
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6));
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+
+  background-blend-mode: overlay;
+  opacity: 0.4;
+}
