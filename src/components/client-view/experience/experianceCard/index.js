@@ -11,7 +11,7 @@ export default function ExperianceCard({ item }) {
   }, []);
 
   return (
-    <section className="" data-aos="zoom-in-up">
+    <section className="overflow-hidden" data-aos="zoom-in-up">
       <div className="flex justify-center border-b border-slate-600 bg-[#1d1d1d] ">
         <div className="bg-[#FFB400] w-[1%] py-5"></div>
         <div

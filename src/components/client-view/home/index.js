@@ -17,7 +17,7 @@ export default function ClientHomeView({ data }) {
     loop: {},
   });
   return (
-    <div className="lg:flex hidden" id="clientHome">
+    <div className="lg:flex overflow-hidden" id="clientHome">
       <div className="relative w-[45%]">
         <div
           className="bg-[#FFB400] hidden lg:block w-[600px] min-h-screen absolute"

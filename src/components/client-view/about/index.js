@@ -15,7 +15,7 @@ export default function ClientAboutView({ data, personalDataInfo }) {
   const [progress8, setProgress8] = useState(70);
 
   return (
-    <div className="pt-[70px] min-h-screen container mx-auto">
+    <div className="pt-[70px] min-h-screen container mx-auto overflow-hidden">
       <h1 className="text-center text-6xl uppercase font-bold">
         About <span className="text-[#FFB400] ">Me</span>
       </h1>

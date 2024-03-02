@@ -13,7 +13,7 @@ import {
 export default function ServiceClient() {
   return (
     <section>
-      <main className="w-[87%] mx-auto lg:w-full">
+      <main className="w-[87%] mx-auto lg:w-full overflow-hidden">
         <h1 className="text-center text-3xl uppercase font-bold mt-[70px] mb-[60px]">
           My Services
         </h1>

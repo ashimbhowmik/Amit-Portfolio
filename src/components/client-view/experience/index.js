@@ -8,7 +8,7 @@ export default function ClientExperienceView({
   educationData,
 }) {
   return (
-    <section className="container mx-auto mt-[80px] mb-[80px]">
+    <section className="container mx-auto mt-[80px] mb-[80px] overflow-hidden">
       <h1 className="text-center lg:text-6xl text-2xl font-bold lg:mb-[50px] mb-6 uppercase">
         Experience <span className="text-[#FFB400] ">& Education</span>
       </h1>

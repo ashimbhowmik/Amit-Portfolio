@@ -16,8 +16,8 @@ export default function ClientProjectView({ data }) {
 
   return (
     <>
-      <div className="container mx-auto min-h-screen">
-        <h1 className="text-center text-6xl uppercase font-bold mb-[80px]">
+      <div className="container mx-auto min-h-screen w-[87%] lg:w-full">
+        <h1 className="text-center lg:text-6xl text-4xl uppercase font-bold lg:mb-[80px] mb-14">
           My <span className="text-[#FFB400] ">Project</span>
         </h1>
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-[40px]">
