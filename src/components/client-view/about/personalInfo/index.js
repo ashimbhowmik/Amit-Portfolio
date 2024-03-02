@@ -10,7 +10,7 @@ export default function PersonalInfo({ personalDataInfo }) {
   }, []);
 
   return (
-    <div className="mt-[100px]">
+    <div className="mt-[100px] hidden lg:block">
       <h1 className="text-3xl uppercase font-bold">Personal Infos</h1>
       <main className="flex gap-10">
         <section className="w-[60%]">
