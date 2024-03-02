@@ -13,10 +13,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "../home/home.module.css";
 
 export default function ClientHomeView({ data }) {
-  const { text } = useTypewriter({
-    words: ["Developer", "Programmer"],
-    loop: {},
-  });
   return (
     <div className="lg:flex overflow-hidden " id="clientHome">
       <div className="lg:relative lg:w-[45%]">
@@ -120,7 +116,7 @@ export default function ClientHomeView({ data }) {
       <div className="lg:hidden absolute top-0">
         <div className=" min-h-screen ">
           <div className="w-full items-center flex ">
-            <div className="px-10 flex flex-col gap-2 items-center justify-center min-h-screen">
+            <div className="px-8 flex flex-col gap-2 items-center justify-center min-h-screen">
               <h1 className="text-[#FFB400] font-bold text-2xl text-center">
                 <Typewriter
                   words={["Hi There !", data.heading]}
@@ -133,10 +129,10 @@ export default function ClientHomeView({ data }) {
               </h1>
               <p className="font-bold text-xl text-center">Web Developer</p>
               {/* <p className="text-sm text-justify">{data?.summary}</p> */}
-              <p className="text-slate-300 text-justify">
-                {data.summary.split(" ").slice(0, 16).join(" ")}
+              <p className="text-slate-300 text-justify mt-3">
+                {data.summary.split(" ").slice(0, 23).join(" ")}
                 <span className="text-[#FFB400]">
-                  {data.summary.split(" ").length > 16 && " "}
+                  {data.summary.split(" ").length > 23 && " "}
                 </span>
               </p>
               <div className="flex items-center mt-5 gap-6">
