@@ -33,8 +33,8 @@ export default function ClientProjectView({ data }) {
             See More
           </button>
         </div>
-        <div className="w-full flex justify-center mt-[100px]">
-          <div className="h-[2px] bg-slate-700 w-[40%]"></div>
+        <div className="w-full flex justify-center lg:mt-[100px] mt-[70px]">
+          <div className="h-[2px] bg-slate-700 lg:w-[40%] w-[60%]"></div>
         </div>
         <div id="clientContact"></div>
       </div>

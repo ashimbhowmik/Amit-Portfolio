@@ -16,15 +16,15 @@ export default function ClientAboutView({ data, personalDataInfo }) {
 
   return (
     <div className="pt-[70px] min-h-screen container mx-auto overflow-hidden">
-      <h1 className="text-center text-6xl uppercase font-bold">
+      <h1 className="text-center lg:text-6xl text-4xl uppercase font-bold">
         About <span className="text-[#FFB400] ">Me</span>
       </h1>
       <PersonalInfo personalDataInfo={personalDataInfo}></PersonalInfo>
-      <div className="w-full flex justify-center mt-[100px]">
-        <div className="h-[2px] bg-slate-700 w-[40%]"></div>
+      <div className="w-full flex justify-center lg:mt-[100px] mt-[60px]">
+        <div className="h-[2px] bg-slate-700 lg:w-[40%] w-[60%]"></div>
       </div>
       <div>
-        <h1 className="text-center text-3xl uppercase font-bold mt-[80px] mb-[70px]">
+        <h1 className="text-center text-3xl uppercase font-bold lg:mt-[80px] mt-[50px] lg:mb-[70px] mb-[50px]">
           My Skill
         </h1>
         <CircularProgressBar
@@ -38,12 +38,12 @@ export default function ClientAboutView({ data, personalDataInfo }) {
           progress8={progress8}
         />
       </div>
-      <div className="w-full flex justify-center mt-[100px]">
-        <div className="h-[2px] bg-slate-700 w-[40%]"></div>
+      <div className="w-full flex justify-center lg:mt-[100px] mt-[70px]">
+        <div className="h-[2px] bg-slate-700 lg:w-[40%] w-[60%]"></div>
       </div>
       <ServiceClient></ServiceClient>
-      <div className="w-full flex justify-center mt-[100px]">
-        <div className="h-[2px] bg-slate-700 w-[40%]"></div>
+      <div className="w-full flex justify-center lg:mt-[100px] mt-[70px]">
+        <div className="h-[2px] bg-slate-700 lg:w-[40%] w-[60%]"></div>
       </div>
       <div id="clientViewExperiance"></div>
     </div>

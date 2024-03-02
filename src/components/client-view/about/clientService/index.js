@@ -14,7 +14,7 @@ export default function ServiceClient() {
   return (
     <section>
       <main className="w-[87%] mx-auto lg:w-full overflow-hidden">
-        <h1 className="text-center text-3xl uppercase font-bold mt-[70px] mb-[60px]">
+        <h1 className="text-center text-3xl uppercase font-bold lg:mt-[70px] mt-[50px] mb-[60px]">
           My Services
         </h1>
         <section>
@@ -25,7 +25,7 @@ export default function ServiceClient() {
                 className="w-12 h-12 text-[#FFB400]"
               />
 
-              <h1 className="text-3xl font-semibold mt-6 mb-4">
+              <h1 className="lg:text-3xl text-2xl font-semibold mt-6 mb-4">
                 Web Development
               </h1>
               <p className="text-justify text-slate-300">
@@ -42,7 +42,7 @@ export default function ServiceClient() {
                 className="w-12 h-12 text-[#FFB400]"
               />
 
-              <h1 className="text-3xl font-semibold mt-6 mb-4">
+              <h1 className="lg:text-3xl text-2xl font-semibold mt-6 mb-4">
                 Problem Solver
               </h1>
               <p className="text-justify text-slate-300">
@@ -60,7 +60,7 @@ export default function ServiceClient() {
                 className="w-12 h-12 text-[#FFB400]"
               />
 
-              <h1 className="text-3xl font-semibold mt-6 mb-4">
+              <h1 className="lg:text-3xl text-2xl font-semibold mt-6 mb-4">
                 Software Engineer
               </h1>
               <p className="text-justify text-slate-300">
@@ -82,7 +82,7 @@ export default function ServiceClient() {
                 className="w-12 h-12 text-[#FFB400]"
               />
 
-              <h1 className="text-3xl font-semibold mt-6 mb-4">
+              <h1 className="lg:text-3xl text-2xl font-semibold mt-6 mb-4">
                 Customer Support
               </h1>
               <p className="text-justify text-slate-300">
@@ -100,7 +100,9 @@ export default function ServiceClient() {
                 className="w-12 h-12 text-[#FFB400]"
               />
 
-              <h1 className="text-3xl font-semibold mt-6 mb-4">Desginer</h1>
+              <h1 className="lg:text-3xl text-2xl font-semibold mt-6 mb-4">
+                Desginer
+              </h1>
               <p className="text-justify text-slate-300">
                 A designer is a professional who visualizes, plans, and creates
                 aesthetic and functional solutions to meet specific needs or
@@ -115,7 +117,9 @@ export default function ServiceClient() {
                 className="w-12 h-12 text-[#FFB400]"
               />
 
-              <h1 className="text-3xl font-semibold mt-6 mb-4">Researcher</h1>
+              <h1 className="lg:text-3xl text-2xl font-semibold mt-6 mb-4">
+                Researcher
+              </h1>
               <p className="text-justify text-slate-300">
                 A researcher is an individual who conducts systematic inquiry or
                 investigation into a particular subject matter, using various

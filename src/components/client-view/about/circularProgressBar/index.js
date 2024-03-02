@@ -29,7 +29,7 @@ export default function CircularProgressBar({
         data-aos="fade-right"
       >
         <div className="flex justify-around lg:w-[50%]">
-          <div style={{ width: 130, height: 130 }}>
+          <div className="w-[130px] h-[130px] ">
             <CircularProgressbar
               value={progress1}
               text={`${progress1}%`}
@@ -40,7 +40,7 @@ export default function CircularProgressBar({
             />
             <p className="text-center mt-6">HTML</p>
           </div>
-          <div style={{ width: 130, height: 130 }}>
+          <div className="w-[130px] h-[130px]">
             <CircularProgressbar
               value={progress2}
               text={`${progress2}%`}
@@ -53,7 +53,7 @@ export default function CircularProgressBar({
           </div>
         </div>
         <div className="flex justify-around lg:w-[50%] lg:mt-0 mt-20">
-          <div style={{ width: 130, height: 130 }}>
+          <div className="w-[130px] h-[130px]">
             <CircularProgressbar
               value={progress3}
               text={`${progress3}%`}
@@ -64,7 +64,7 @@ export default function CircularProgressBar({
             />
             <p className="text-center mt-6">CSS</p>
           </div>
-          <div style={{ width: 130, height: 130 }}>
+          <div className="w-[130px] h-[130px]">
             <CircularProgressbar
               value={progress4}
               text={`${progress4}%`}
@@ -81,7 +81,7 @@ export default function CircularProgressBar({
         className="w-full hidden  lg:flex justify-evenly items-center mt-24"
         data-aos="fade-left"
       >
-        <div style={{ width: 130, height: 130 }}>
+        <div className="w-[130px] h-[130px]">
           <CircularProgressbar
             value={progress5}
             text={`${progress5}%`}
@@ -92,7 +92,7 @@ export default function CircularProgressBar({
           />
           <p className="text-center mt-6">NEXT JS</p>
         </div>
-        <div style={{ width: 130, height: 130 }}>
+        <div className="w-[130px] h-[130px]">
           <CircularProgressbar
             value={progress6}
             text={`${progress6}%`}
@@ -103,7 +103,7 @@ export default function CircularProgressBar({
           />
           <p className="text-center mt-6">PYTHON</p>
         </div>
-        <div style={{ width: 130, height: 130 }}>
+        <div className="w-[130px] h-[130px]">
           <CircularProgressbar
             value={progress7}
             text={`${progress7}%`}
@@ -114,7 +114,7 @@ export default function CircularProgressBar({
           />
           <p className="text-center mt-6">C++</p>
         </div>
-        <div style={{ width: 130, height: 130 }}>
+        <div className="w-[130px] h-[130px]">
           <CircularProgressbar
             value={progress8}
             text={`${progress8}%`}
@@ -132,7 +132,7 @@ export default function CircularProgressBar({
           data-aos="fade-left"
         >
           <div className="flex justify-around lg:w-[50%]">
-            <div style={{ width: 130, height: 130 }}>
+            <div className="w-[130px] h-[130px]">
               <CircularProgressbar
                 value={progress5}
                 text={`${progress5}%`}
@@ -143,7 +143,7 @@ export default function CircularProgressBar({
               />
               <p className="text-center mt-6">NEXT JS</p>
             </div>
-            <div style={{ width: 130, height: 130 }}>
+            <div className="w-[130px] h-[130px]">
               <CircularProgressbar
                 value={progress6}
                 text={`${progress6}%`}
@@ -156,7 +156,7 @@ export default function CircularProgressBar({
             </div>
           </div>
           <div className="flex justify-around lg:w-[50%] lg:mt-0 mt-20">
-            <div style={{ width: 130, height: 130 }}>
+            <div className="w-[130px] h-[130px]">
               <CircularProgressbar
                 value={progress7}
                 text={`${progress7}%`}
@@ -167,7 +167,7 @@ export default function CircularProgressBar({
               />
               <p className="text-center mt-6">C++</p>
             </div>
-            <div style={{ width: 130, height: 130 }}>
+            <div className="w-[130px] h-[130px]">
               <CircularProgressbar
                 value={progress8}
                 text={`${progress8}%`}

@@ -25,13 +25,15 @@ export default function ClientContactView() {
       );
   };
   return (
-    <div className="container  mx-auto mt-[80px] lg:pb-[130px] pb-10">
-      <h1 className="text-center lg:text-6xl text-4xl font-bold lg:mb-[100px] mb-14 uppercase">
+    <div className="container  mx-auto lg:mt-[80px] mt-[50px] lg:pb-[130px] pb-10">
+      <h1 className="text-center lg:text-6xl text-4xl font-bold lg:mb-[100px] mb-10 uppercase">
         Get in <span className="text-[#FFB400] ">Touch</span>
       </h1>
-      <main className="lg:flex gap-16 w-[87%] lg:w-full mx-auto">
+      <main className="lg:flex  gap-16 w-[87%] lg:w-full mx-auto">
         <section className="lg:w-[55%] space-y-7">
-          <h1 className="text-3xl font-semibold">Message Me</h1>
+          <h1 className="lg:text-3xl text-2xl text-center lg:text-left mb-10 lg:mb-0 font-semibold">
+            Message Me
+          </h1>
           <form ref={form} onSubmit={sendEmail} action="" className="space-y-7">
             <div className="flex">
               <div className="flex-1">
@@ -81,7 +83,9 @@ export default function ClientContactView() {
           </form>
         </section>
         <section className="lg:w-[45%] mt-14 lg:mt-0 space-y-7">
-          <h1 className="text-3xl font-semibold ">Contact Info</h1>
+          <h1 className="lg:text-3xl text-2xl text-center lg:left font-semibold ">
+            Contact Info
+          </h1>
           <p className="text-slate-300 text-justify">
             Always available for freelance work if the right project comes
             along, Feel free to contact me!
@@ -105,7 +109,7 @@ export default function ClientContactView() {
                 </svg>
               </p>
 
-              <p className="mt-6">
+              <p className="lg:mt-[30px] mt-10">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -122,7 +126,7 @@ export default function ClientContactView() {
                 </svg>
               </p>
 
-              <p className="mt-9">
+              <p className="lg:mt-8 mt-[44px]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -137,7 +141,7 @@ export default function ClientContactView() {
                   />
                 </svg>
               </p>
-              <p className="mt-8">
+              <p className="lg:mt-7 mt-[30px]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
