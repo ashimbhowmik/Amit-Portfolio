@@ -8,7 +8,7 @@ export default function ClientExperienceView({
   educationData,
 }) {
   return (
-    <section className="container mx-auto lg:mt-[80px] mt-[50px] lg:mb-[80px] mb-[50px] overflow-hidden">
+    <section className="container mx-auto lg:mt-[80px] mt-[50px] lg:mb-[80px] mb-[50px] overflow-hidden lg:w-[85%] 2xl:w-full">
       <h1 className="text-center lg:text-6xl text-2xl font-bold lg:mb-[50px] mb-6 uppercase">
         Experience <span className="text-[#FFB400] ">& Education</span>
       </h1>
@@ -29,7 +29,7 @@ export default function ClientExperienceView({
           {educationData?.map((item) => (
             <EducationCard key={item.id} item={item}></EducationCard>
           ))}
-          <p className="bg-[#111111] h-[22px] absolute bottom-0 w-full hidden lg:block "></p>
+          <p className="bg-[#111111] h-[10px] absolute bottom-0 w-full hidden lg:block "></p>
         </div>
       </section>
       <div className="w-full flex justify-center lg:mt-[100px] mt-[70px]">

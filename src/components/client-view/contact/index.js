@@ -25,7 +25,7 @@ export default function ClientContactView() {
       );
   };
   return (
-    <div className="container  mx-auto lg:mt-[80px] mt-[50px] lg:pb-[130px] pb-10">
+    <div className="container  mx-auto lg:mt-[80px] mt-[50px] lg:w-[85%] 2xl:w-full  lg:pb-[130px] pb-10">
       <h1 className="text-center lg:text-6xl text-4xl font-bold lg:mb-[100px] mb-10 uppercase">
         Get in <span className="text-[#FFB400] ">Touch</span>
       </h1>

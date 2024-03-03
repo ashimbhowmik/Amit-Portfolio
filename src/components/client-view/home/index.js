@@ -17,18 +17,18 @@ export default function ClientHomeView({ data }) {
     <div className="lg:flex overflow-hidden " id="clientHome">
       <div className="lg:relative lg:w-[45%]">
         <div
-          className="bg-[#FFB400] hidden lg:block w-[600px] min-h-screen absolute"
+          className="bg-[#FFB400] hidden lg:block 2xl:w-[600px] xl:w-[550px] min-h-screen absolute"
           style={{
             clipPath: "polygon(0 0, 38% 0, 87% 100%, 0% 100%)",
           }}
         ></div>
         <div className="lg:absolute hidden lg:block lg:left-[50px] lg:top-[40px] lg:rounded-[40px]  lg:shadow-lg">
-          <div className="2xl:h-[170px] 2xl:w-[680px] bg-black rounded-t-[40px] shadow-lg"></div>
+          <div className="2xl:h-[170px] 2xl:w-[680px] lg:w-[490px] lg:h-[130px]  bg-black rounded-t-[40px] shadow-lg"></div>
           <Image
             src={img}
             alt=""
             objectFit="cover"
-            className="rounded-b-[40px] 2xl:h-[740px] 2xl:w-[680px] xl:h-[450px] shadow-lg"
+            className="rounded-b-[40px] 2xl:h-[740px] 2xl:w-[680px] lg:w-[490px] xl:h-[480px] shadow-lg"
           />
         </div>
         <div className="lg:hidden">
@@ -39,7 +39,7 @@ export default function ClientHomeView({ data }) {
       <div className="lg:w-[55%] min-h-screen hidden lg:flex items-center ">
         <div className="w-full items-center flex relative">
           <div className="space-y-5 w-[75%]">
-            <h1 className="text-[#FFB400] font-bold text-6xl">
+            <h1 className="text-[#FFB400] font-bold lg:text-5xl 2xl:text-6xl">
               <Typewriter
                 words={["Hi There !", data.heading]}
                 loop={20}
@@ -49,8 +49,8 @@ export default function ClientHomeView({ data }) {
               />
               <Cursor></Cursor>
             </h1>
-            <p className="font-bold text-6xl">Web Developer</p>
-            <p className="text-xl text-justify">{data?.summary}</p>
+            <p className="font-bold lg:text-5xl 2xl:text-6xl">Web Developer</p>
+            <p className="2xl:text-xl text-justify">{data?.summary}</p>
             <div className="flex items-center">
               <button className="mr-5 px-4 py-3  shadow-2xl bg-black hover:shadow-sm ease-in-out duration-300 hover:shadow-[#FFB400] rounded-lg transform hover:scale-95">
                 <a
@@ -117,7 +117,7 @@ export default function ClientHomeView({ data }) {
         <div className=" min-h-screen ">
           <div className="w-full items-center flex ">
             <div className="px-8 flex flex-col gap-2 items-center justify-center min-h-screen">
-              <h1 className="text-[#FFB400] font-bold text-2xl text-center">
+              <h1 className="text-[#FFB400] font-bold text-3xl text-center">
                 <Typewriter
                   words={["Hi There !", data.heading]}
                   loop={20}
@@ -127,7 +127,9 @@ export default function ClientHomeView({ data }) {
                 />
                 <Cursor></Cursor>
               </h1>
-              <p className="font-bold text-xl text-center">Web Developer</p>
+              <p className="font-bold text-xl text-center mt-2">
+                Web Developer
+              </p>
               {/* <p className="text-sm text-justify">{data?.summary}</p> */}
               <p className="text-slate-300 text-justify mt-3">
                 {data.summary.split(" ").slice(0, 23).join(" ")}
@@ -136,7 +138,7 @@ export default function ClientHomeView({ data }) {
                 </span>
               </p>
               <div className="flex items-center mt-5 gap-6">
-                <button className=" px-4 py-3  shadow-2xl bg-black hover:shadow-sm ease-in-out duration-300 hover:shadow-[#FFB400] rounded-lg transform hover:scale-95">
+                <button className=" px-4 py-3  shadow-2xl bg-[#0a1129] hover:shadow-sm ease-in-out duration-300 hover:shadow-[#FFB400] rounded-lg transform hover:scale-95">
                   <a
                     href="https://www.facebook.com/ashim.bhowmik.amit.2000"
                     target="_blank"
@@ -147,7 +149,7 @@ export default function ClientHomeView({ data }) {
                     />
                   </a>
                 </button>
-                <button className=" px-4 py-3  shadow-2xl bg-black hover:shadow-sm ease-in-out duration-300 hover:shadow-[#FFB400] rounded-lg transform hover:scale-95">
+                <button className=" px-4 py-3  shadow-2xl bg-[#0a1129] hover:shadow-sm ease-in-out duration-300 hover:shadow-[#FFB400] rounded-lg transform hover:scale-95">
                   <a href="https://github.com/ashimbhowmik" target="_blank">
                     <FontAwesomeIcon
                       icon={faGithub}
@@ -155,7 +157,7 @@ export default function ClientHomeView({ data }) {
                     />
                   </a>
                 </button>
-                <button className=" px-4 py-3  shadow-2xl bg-black hover:shadow-sm ease-in-out duration-300 hover:shadow-[#FFB400] rounded-lg transform hover:scale-95">
+                <button className=" px-4 py-3  shadow-2xl bg-[#0a1129] hover:shadow-sm ease-in-out duration-300 hover:shadow-[#FFB400] rounded-lg transform hover:scale-95">
                   <a
                     href="https://www.linkedin.com/in/ashimbhowmik/"
                     target="_blank"

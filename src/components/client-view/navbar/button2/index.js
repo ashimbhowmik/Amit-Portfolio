@@ -4,18 +4,12 @@ import { GlobalContext } from "@/context/GlobalContext";
 
 export default function Button2({ view }) {
   const [aboutName, setAboutName] = useState(false);
-  const aboutRef = useRef(null);
   const { setView } = useContext(GlobalContext);
 
-  useEffect(() => {
-    aboutRef.current = document.querySelector(
-      ".text-center.text-6xl.uppercase.font-bold"
-    );
-  }, []);
-
-  const handleScroll = () => {
-    // Scroll to the parent element of ClientProjectView
-    aboutRef.current.parentElement.scrollIntoView({ behavior: "smooth" });
+  const scrollToProject = () => {
+    document.getElementById("clientAbout").scrollIntoView({
+      behavior: "smooth",
+    });
     setView("about");
   };
 
@@ -31,7 +25,7 @@ export default function Button2({ view }) {
             className={` button relative flex gap-2 justify-end p-3 rounded-full items-center  font-bold ${
               view === "about" ? "bg-[#FFB400]  text-white" : ""
             }`}
-            onClick={handleScroll}
+            onClick={scrollToProject}
             onMouseEnter={() => setAboutName(true)}
             onMouseLeave={() => setAboutName(false)}
           >

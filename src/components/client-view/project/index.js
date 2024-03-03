@@ -16,7 +16,7 @@ export default function ClientProjectView({ data }) {
 
   return (
     <>
-      <div className="container mx-auto min-h-screen w-[87%] lg:w-full">
+      <div className="container mx-auto min-h-screen w-[87%] lg:w-[85%] 2xl:w-full">
         <h1 className="text-center lg:text-6xl text-4xl uppercase font-bold lg:mb-[80px] mb-14">
           My <span className="text-[#FFB400] ">Project</span>
         </h1>
