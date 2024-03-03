@@ -16,7 +16,7 @@ export default function PersonalInfo({ personalDataInfo }) {
       </h1>
       <main className="lg:flex gap-10 mt-[50px] lg:mt-0">
         <section className="lg:w-[60%] ">
-          <div className="mt-10 flex items-center text-[12px] lg:text-[18px]">
+          <div className="mt-10 flex items-center text-[12px] lg:text-[16px] 2xl:text-[18px]">
             <div className="space-y-5  w-[50%] lg:w-full ">
               <p className="text-slate-400 font-semibold">
                 Name :{" "}

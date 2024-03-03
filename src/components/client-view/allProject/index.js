@@ -26,8 +26,8 @@ export default function AllProject({ data }) {
           <PageLoader />
         </div>
       ) : (
-        <div className="container mx-auto min-h-screen relative lg:py-[80px] py-[50px] w-[87%] 2xl:w-full">
-          <div className="absolute 2xl:top-[60px] 2xl:right-[-50px]  lg:top-[50px] lg:right-[-20px] top-[15px] right-5 overflow-hidden">
+        <div className=" mx-auto min-h-screen relative lg:py-[80px] py-[50px] w-[87%] 2xl:w-[80%]">
+          <div className="absolute 2xl:top-[60px] 2xl:-mr-10 lg:top-[50px] lg:right-[-20px] top-[15px] right-5 overflow-hidden">
             <button
               className="text-[#FFB400] fixed z-50  hover:text-red-600 ease-in-out duration-150 transform hover:scale-90"
               onClick={() => router.push("/")}

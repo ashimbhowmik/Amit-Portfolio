@@ -16,7 +16,7 @@ export default function ClientAboutView({ data, personalDataInfo }) {
 
   return (
     <div
-      className="pt-[70px] min-h-screen container mx-auto overflow-hidden lg:w-[85%] 2xl:w-full "
+      className="pt-[70px] min-h-screen  mx-auto overflow-hidden lg:w-[85%] 2xl:w-[83%] "
       id="clientAbout"
     >
       <h1 className="text-center lg:text-6xl text-4xl uppercase font-bold">

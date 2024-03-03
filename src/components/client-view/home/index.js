@@ -22,13 +22,13 @@ export default function ClientHomeView({ data }) {
             clipPath: "polygon(0 0, 38% 0, 87% 100%, 0% 100%)",
           }}
         ></div>
-        <div className="lg:absolute hidden lg:block lg:left-[50px] lg:top-[40px] lg:rounded-[40px]  lg:shadow-lg">
-          <div className="2xl:h-[170px] 2xl:w-[680px] lg:w-[490px] lg:h-[130px]  bg-black rounded-t-[40px] shadow-lg"></div>
+        <div className="lg:absolute hidden lg:block lg:ml-12 lg:top-[40px] lg:rounded-[40px]  lg:shadow-lg">
+          <div className="2xl:h-[170px] 2xl:w-[43rem] lg:w-[31rem]  lg:h-[130px]  bg-black rounded-t-[40px] shadow-lg"></div>
           <Image
             src={img}
             alt=""
             objectFit="cover"
-            className="rounded-b-[40px] 2xl:h-[740px] 2xl:w-[680px] lg:w-[490px] xl:h-[480px] shadow-lg"
+            className="rounded-b-[40px] 2xl:h-[740px] 2xl:w-[43rem] lg:w-[31rem] xl:h-[480px] shadow-lg"
           />
         </div>
         <div className="lg:hidden">
@@ -37,7 +37,7 @@ export default function ClientHomeView({ data }) {
       </div>
       {/* pc part */}
       <div className="lg:w-[55%] min-h-screen hidden lg:flex items-center ">
-        <div className="w-full items-center flex relative">
+        <div className="w-full items-center flex relative ">
           <div className="space-y-5 w-[75%]">
             <h1 className="text-[#FFB400] font-bold lg:text-5xl 2xl:text-6xl">
               <Typewriter
@@ -83,7 +83,7 @@ export default function ClientHomeView({ data }) {
                 </a>
               </button>
             </div>
-            <button className="button relative pl-5 border !mt-8 hover:bg-[#FFB400] text-slate-300 hover:text-black font-semibold ease-in-out duration-300 border-[#FFB400] rounded-full space-x-2 flex items-center">
+            <button className="button pl-5 border !mt-8 hover:bg-[#FFB400] text-slate-300 hover:text-black font-semibold ease-in-out duration-300 border-[#FFB400] rounded-full space-x-2 flex items-center">
               <p className="text-xl">More About Me</p>
               <p className="rounded-full p-3  bg-[#FFB400]">
                 <svg
@@ -105,7 +105,7 @@ export default function ClientHomeView({ data }) {
               </p>
             </button>
           </div>
-          <div className="w-[25%] hidden lg:flex justify-end absolute top-[0px] right-[0px]">
+          <div className="w-[25%]  hidden lg:flex justify-end -mt-96">
             <Navbar />
           </div>
         </div>
@@ -116,8 +116,8 @@ export default function ClientHomeView({ data }) {
       <div className="lg:hidden absolute top-0">
         <div className=" min-h-screen ">
           <div className="w-full items-center flex ">
-            <div className="px-8 flex flex-col gap-2 items-center justify-center min-h-screen">
-              <h1 className="text-[#FFB400] font-bold text-3xl text-center">
+            <div className="px-8 flex flex-col  gap-2 items-center justify-center min-h-screen">
+              <h1 className="text-[#FFB400] font-bold text-[27px] text-center">
                 <Typewriter
                   words={["Hi There !", data.heading]}
                   loop={20}
