@@ -38,8 +38,16 @@ export default function ExperianceCard({ item }) {
           <p className="text-sm lg:hidden text-slate-300 w-[88%] ">
             {item.company}
           </p>
+
           <p className="text-sm text-slate-300">{item.location}</p>
-          <p className="text-sm text-slate-300 text-justify pr-10">
+          <p className="text-sm md:hidden text-slate-300 text-justify pr-10">
+            {/* {item.duration} */}
+            {item.duration.split(" ").slice(0, 15).join(" ")}
+            <span className="text-[#FFB400]">
+              {item.duration.split(" ").length > 15 && " see more..."}
+            </span>
+          </p>
+          <p className="text-sm hidden md:block text-slate-300 text-justify pr-10">
             {item.duration}
           </p>
         </div>

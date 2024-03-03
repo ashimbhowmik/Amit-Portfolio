@@ -33,7 +33,15 @@ export default function EducationCard({ item }) {
 
             <p className="">{item.year}</p>
           </div>
-          <p className="text-justify pr-10 text-slate-300 text-sm">
+
+          <p className="text-sm md:hidden text-slate-300 text-justify pr-10">
+            {/* {item.samary2} */}
+            {item.samary2.split(" ").slice(0, 15).join(" ")}
+            <span className="text-[#FFB400]">
+              {item.samary2.split(" ").length > 15 && " see more..."}
+            </span>
+          </p>
+          <p className="text-sm hidden md:block text-slate-300 text-justify pr-10">
             {item.samary2}
           </p>
         </div>

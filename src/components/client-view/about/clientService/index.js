@@ -108,8 +108,7 @@ export default function ServiceClient() {
                 Customer support is a service provided to users to help them
                 with issues, questions, or concerns related to a product or
                 service. Support is typically provided through various channels
-                such as email, chat, phone, or in-person, and aims to provide
-                timely and effective assistance to ensure customer satisfaction.
+                such as email, chat, phone, or in-person.
               </p>
             </div>
             <div
@@ -128,8 +127,7 @@ export default function ServiceClient() {
               <p className="text-justify text-slate-300">
                 A designer is a professional who visualizes, plans, and creates
                 aesthetic and functional solutions to meet specific needs or
-                solve problems, often using design principles, creativity, and
-                technology to create user-centered experiences or products.
+                solve problems, often using design principles, creativity,.
               </p>
             </div>
             <div
@@ -149,8 +147,7 @@ export default function ServiceClient() {
                 A researcher is an individual who conducts systematic inquiry or
                 investigation into a particular subject matter, using various
                 methodologies and data analysis techniques to contribute to the
-                body of knowledge in that field or scientific inquiry, data
-                collection, analysis, and interpretation
+                body of knowledge in that field or scientific inquiry
               </p>
             </div>
           </div>
