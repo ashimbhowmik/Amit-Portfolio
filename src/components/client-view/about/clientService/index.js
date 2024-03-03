@@ -9,8 +9,15 @@ import {
   faUser,
   faBook,
 } from "@fortawesome/free-solid-svg-icons";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function ServiceClient() {
+  useEffect(() => {
+    AOS.init({});
+  }, []);
+
   return (
     <section>
       <main className="w-[87%] mx-auto lg:w-full overflow-hidden">
@@ -19,7 +26,10 @@ export default function ServiceClient() {
         </h1>
         <section>
           <div className="grid lg:grid-cols-3 grid-cols-1 gap-12 ">
-            <div className=" bg-[#1D1D1D] hover:border-b-[2px] border-[#FFB400] ease-in-out duration-300 transform hover:scale-110 p-10 cursor-pointer">
+            <div
+              data-aos="zoom-in-up"
+              className=" bg-[#1D1D1D] hover:border-b-[2px] border-[#FFB400] ease-in-out duration-300 transform hover:scale-110 p-10 cursor-pointer"
+            >
               <FontAwesomeIcon
                 icon={faCss3Alt}
                 className="w-12 h-12 text-[#FFB400]"
@@ -35,7 +45,10 @@ export default function ServiceClient() {
                 a seamless user experience.
               </p>
             </div>
-            <div className="  bg-[#1D1D1D] hover:border-b-[2px] border-[#FFB400] ease-in-out duration-300 transform hover:scale-110 p-10 cursor-pointer">
+            <div
+              data-aos="zoom-in-up"
+              className="  bg-[#1D1D1D] hover:border-b-[2px] border-[#FFB400] ease-in-out duration-300 transform hover:scale-110 p-10 cursor-pointer"
+            >
               {/* <FontAwesomeIcon icon={faCss3Alt} className="w-10 h-10 " /> */}
               <FontAwesomeIcon
                 icon={faCodepen}
@@ -53,7 +66,10 @@ export default function ServiceClient() {
                 as root cause analysis, brainstorming, or seeking expert advice
               </p>
             </div>
-            <div className="  bg-[#1D1D1D] hover:border-b-[2px] border-[#FFB400] ease-in-out duration-300 transform hover:scale-110 p-10 cursor-pointer">
+            <div
+              data-aos="zoom-in-up"
+              className="  bg-[#1D1D1D] hover:border-b-[2px] border-[#FFB400] ease-in-out duration-300 transform hover:scale-110 p-10 cursor-pointer"
+            >
               {/* <FontAwesomeIcon icon={faCss3Alt} className="w-10 h-10 " /> */}
               <FontAwesomeIcon
                 icon={faLayerGroup}
@@ -75,7 +91,10 @@ export default function ServiceClient() {
         </section>
         <section className="mt-12 pb-0 lg:pb-7">
           <div className="grid lg:grid-cols-3 grid-cols-1 gap-12">
-            <div className="  bg-[#1D1D1D] hover:border-b-[2px] border-[#FFB400] ease-in-out duration-300 transform hover:scale-110 p-10 cursor-pointer">
+            <div
+              data-aos="zoom-in-up"
+              className="  bg-[#1D1D1D] hover:border-b-[2px] border-[#FFB400] ease-in-out duration-300 transform hover:scale-110 p-10 cursor-pointer"
+            >
               {/* <FontAwesomeIcon icon={faCss3Alt} className="w-10 h-10 " /> */}
               <FontAwesomeIcon
                 icon={faUser}
@@ -93,7 +112,10 @@ export default function ServiceClient() {
                 timely and effective assistance to ensure customer satisfaction.
               </p>
             </div>
-            <div className="  bg-[#1D1D1D] hover:border-b-[2px] border-[#FFB400] ease-in-out duration-300 transform hover:scale-110 p-10 cursor-pointer">
+            <div
+              data-aos="zoom-in-up"
+              className="  bg-[#1D1D1D] hover:border-b-[2px] border-[#FFB400] ease-in-out duration-300 transform hover:scale-110 p-10 cursor-pointer"
+            >
               {/* <FontAwesomeIcon icon={faCss3Alt} className="w-10 h-10 " /> */}
               <FontAwesomeIcon
                 icon={faPenFancy}
@@ -110,7 +132,10 @@ export default function ServiceClient() {
                 technology to create user-centered experiences or products.
               </p>
             </div>
-            <div className="  bg-[#1D1D1D] hover:border-b-[2px] border-[#FFB400] ease-in-out duration-300 transform hover:scale-110 p-10 cursor-pointer">
+            <div
+              data-aos="zoom-in-up"
+              className="  bg-[#1D1D1D] hover:border-b-[2px] border-[#FFB400] ease-in-out duration-300 transform hover:scale-110 p-10 cursor-pointer"
+            >
               {/* <FontAwesomeIcon icon={faCss3Alt} className="w-10 h-10 " /> */}
               <FontAwesomeIcon
                 icon={faBook}
