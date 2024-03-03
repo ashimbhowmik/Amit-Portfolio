@@ -83,7 +83,7 @@ export default function ClientContactView() {
           </form>
         </section>
         <section className="lg:w-[45%] mt-14 lg:mt-0 space-y-7">
-          <h1 className="lg:text-3xl text-2xl text-center lg:left font-semibold ">
+          <h1 className="lg:text-3xl text-2xl text-center lg:text-left font-semibold ">
             Contact Info
           </h1>
           <p className="text-slate-300 text-justify">
