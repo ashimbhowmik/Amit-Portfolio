@@ -23,7 +23,7 @@ export default function ClientHomeView({ data }) {
           }}
         ></div>
         <div className="lg:absolute hidden lg:block lg:ml-12 lg:top-[40px] lg:rounded-[40px]  lg:shadow-lg">
-          <div className="2xl:h-[280px] 2xl:w-[90%] lg:w-[97%]  lg:h-[130px]  bg-black rounded-t-[40px] shadow-lg"></div>
+          <div className="2xl:h-56 2xl:w-[90%] lg:w-[97%]  lg:h-[130px]  bg-black rounded-t-[40px] shadow-lg"></div>
           <Image
             src={img}
             alt=""
@@ -37,7 +37,7 @@ export default function ClientHomeView({ data }) {
       </div>
       {/* pc part */}
       <div className="lg:w-[55%] min-h-screen hidden lg:flex items-center ">
-        <div className="w-full items-center flex relative ">
+        <div className="w-full items-center flex relative">
           <div className="space-y-5 w-[75%]">
             <h1 className="text-[#FFB400] font-bold lg:text-5xl 2xl:text-6xl">
               <Typewriter
