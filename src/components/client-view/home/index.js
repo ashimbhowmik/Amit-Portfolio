@@ -23,12 +23,12 @@ export default function ClientHomeView({ data }) {
           }}
         ></div>
         <div className="lg:absolute hidden lg:block lg:ml-12 lg:top-[40px] lg:rounded-[40px]  lg:shadow-lg">
-          <div className="2xl:h-[170px] 2xl:w-[43rem] lg:w-[31rem]  lg:h-[130px]  bg-black rounded-t-[40px] shadow-lg"></div>
+          <div className="2xl:h-[280px] 2xl:w-[90%] lg:w-[97%]  lg:h-[130px]  bg-black rounded-t-[40px] shadow-lg"></div>
           <Image
             src={img}
             alt=""
             objectFit="cover"
-            className="rounded-b-[40px] 2xl:h-[740px] 2xl:w-[43rem] lg:w-[31rem] xl:h-[480px] shadow-lg"
+            className="rounded-b-[40px] 2xl:h-full 2xl:w-[90%] lg:w-[97%] xl:h-[480px] shadow-lg"
           />
         </div>
         <div className="lg:hidden">
