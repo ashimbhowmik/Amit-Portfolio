@@ -22,8 +22,8 @@ export default function ClientHomeView({ data }) {
             clipPath: "polygon(0 0, 38% 0, 87% 100%, 0% 100%)",
           }}
         ></div>
-        <div className="lg:absolute hidden lg:block lg:ml-12 lg:top-[40px] lg:rounded-[40px]  lg:shadow-lg">
-          <div className="2xl:h-[230px] 2xl:w-[90%] lg:w-[97%]  lg:h-[130px]  bg-black rounded-t-[40px] shadow-lg"></div>
+        <div className="lg:absolute hidden lg:block lg:ml-12 lg:mt-12 lg:rounded-[40px]  lg:shadow-lg">
+          <div className="2xl:h-[210px] 2xl:w-[90%] lg:w-[97%]  lg:h-[130px]  bg-black rounded-t-[40px] shadow-lg"></div>
           <Image
             src={img}
             alt=""
