@@ -12,7 +12,7 @@ export default function EducationCard({ item }) {
 
   return (
     <section className=" " data-aos="zoom-in-up">
-      <div className="flex justify-center border-b lg:h-[250px] border-slate-600 bg-[#1d1d1d] border">
+      <div className="flex justify-center border-b lg:h-[250px] border-slate-600 bg-[#1d1d1d] ">
         <div className="bg-[#FFB400] w-[1%] py-5"></div>
         <div
           className="bg-[#FFB400] py-5 h-[15px] w-[30px] mt-7"
